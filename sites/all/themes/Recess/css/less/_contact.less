@@ -1,0 +1,183 @@
+.contact {
+	background: @white url('@{image-path}/step-pattern.png') repeat; float: left; width: 100%; padding-top: 3em;
+	.contact-info {
+		width: 100%; min-height: 12.5em; background: @recess-red; float: left;
+		#map-canvas {
+			width: 66.66%; height: 100%; min-height: 18.5em; display: block; float: left;
+			img {
+				max-width: none;
+			}
+		}
+		.location-info {
+			width: 33.34%; height: 100%; background: @recess-red; float: left; color: @white; padding: 1em;
+			p {
+				.batman-light; 
+				strong {
+					.batman-medium;
+				}
+			}
+			a { 
+				color: #fff; 
+			}
+		}
+	}
+	.main-contact-text {
+		padding: 7em 0 4.5em; text-align: center;
+		h1 {
+			text-transform: uppercase; /*font-size: 2.5em;*/
+		}
+	}
+	.contact-form-section {
+		background: @light-grey; border-top: 1px solid @mid-grey; border-bottom: 1px solid @mid-grey; padding: 2em 0;
+		.success {
+			text-align: center; display: none; padding: 4em 0;
+			.back-to-form {
+				.batman-bold; font-size: 1em; text-decoration: none; color: @recess-red; background: url('@{image-path}/icon_back-link.png') no-repeat left center; padding-left: 1.5em; .transition(all 150ms ease-in);
+				&:hover {
+					background-position: 8px center;
+				}
+			}
+		}
+	}
+	.block-webform {
+		h2 {
+			display: block; text-align: center;
+		}
+		h3 {
+			font-size: 1em; .batman-bold; color: @recess-red; position: relative; text-align: center; margin-top: 2em;
+			img {
+				position: relative; top: .2em;
+			}
+			&:before {
+                content: ""; border-top: 1px solid @recess-red; width: 18%; position: absolute; top: .75em; left: 0; 
+            }
+            &:after {
+                content: ""; border-top: 1px solid @recess-red; width: 18%; position: absolute; top: .75em; right: 0; 
+            }
+		}
+		.webform-component--upload-text-1, .webform-component--upload-field-1 , .webform-component--upload-field-2 {
+			display: none;
+		}
+	}
+}
+
+.block-webform {
+	h2 {
+		display: none;
+	} 
+
+}
+.form-item {
+	width: 100%; display: block; position: relative; float: left;
+	input {
+		width: 100%; border: 1px solid @mid-grey; .border-radius(.2em); padding: .5em;
+	}
+	textarea {
+		width: 100%; border: 1px solid @mid-grey; .border-radius(.2em); padding: .5em;
+	}
+	label {
+		text-align: left; position: absolute; .batman-light; color: @grey-2; font-size: .9em; padding: .5em;
+	}
+	&.webform-component-select {
+		width: 100%; border: 1px solid @mid-grey; .border-radius(.2em); overflow: hidden; background: @white url('@{image-path}/dropdown-arrow.png') no-repeat right center;
+		select {
+			padding: .6em; .batman-light; color: @grey-2; font-size: .9em; background: none; width: 115%; -webkit-appearance: none; outline: none;
+		}
+		label {
+			position: absolute; display: none;
+		}
+	}
+	&.webform-component-file {
+		height: 80px; width: 50%; cursor: pointer;
+		label {
+			display: none;
+		}
+		.form-managed-file {
+			position: relative; z-index: 2; .opacity(0);
+		}
+		.form-file {
+			height: 80px;
+		}
+		.description {
+			display: block; position: absolute; width: 90%; overflow: hidden; height: 20px; bottom: 8px; z-index: 0; font-size: .75em; 
+		}
+		.uploadFile {
+			position: absolute; z-index: 1; background: transparent; top: 2em; left: 3.5em; padding: 0; font-size: .9em; text-align: left; border: none; .batman-medium; color: @recess-red;
+		}
+		.droparea {
+			display: block; position: absolute; top: 0; left: 50%; margin-left: -25%; z-index: 0; 
+		}
+		.form-submit {
+			display: none;
+		}
+		.file-form-item {
+			padding-left: 3em; background: url('@{image-path}/file-upload.png') no-repeat left top; position: absolute;
+			&.browse-files {
+				top: 0; height: 100%;
+				h4 {
+					.batman-light; margin-bottom: .2em;
+				}
+				.browse {
+					.batman-bold; color: @recess-red; font-size: .9em; background: url('@{image-path}/icon_browse-files.png') no-repeat right center; padding-right: 1.5em; .transition(all 150ms ease-in);
+				}
+			}
+			&.uploaded-file {
+				top: 0; height: 100%; display: none; width: 100%;
+				h4 {
+					.batman-light;
+				}
+				.uploadFile {
+					width: 100%; padding-right: 5em; text-overflow: ellipsis;
+				}
+
+			}
+		}
+		&:hover {
+			.file-form-item {
+				&.browse-files {
+					.browse {
+						padding-right: 2em; 
+					}
+				}
+			}
+		}
+	}
+	.parsley-error {
+		background-image: url('@{image-path}/icon_error-style.png'); background-repeat: no-repeat; background-position: 99% .4em;
+	}
+	.parsley-errors-list {
+		position: absolute; width: 100%; /*right: -96%; */color: @recess-red; top: 100%; .batman-light; font-size: .8em; list-style: none;
+		li {
+			/*background: url('@{image-path}/icon_error-style.png') no-repeat left center; */ list-style: none; /*padding-left: 2.5em;*/
+		}
+	}
+}
+.form-actions {
+	float: left; width: 100%; margin-top: 2em;
+	.form-submit {
+		display: none;
+	}
+}
+.styled-select {
+	margin: 1em 0 2em; border: 1px solid @mid-grey; .border-radius(.2em); overflow: hidden; background: @white url('@{image-path}/dropdown-arrow.png') no-repeat right center;
+	select {
+		padding: .6em; .batman-light; color: @grey-2; font-size: .9em; background: none; width: 115%; -webkit-appearance: none; outline: none;
+	}
+}
+
+#submit-loader {
+	top: 0; position: fixed; width: 100%; height: 100%; background: rgba(0,0,0,.5); z-index: 9999; display: none;
+	img {
+		padding: 1em; background: @white; .border-radius(5px); position: relative; top: 50%; margin-top: -32px; left: 50%; margin-left: -32px;
+	}
+}
+
+@media (max-width: 767px) { 
+   .page-node-7 article[role="main"] {top: 0;}
+   .page-node-7 footer[role="contentinfo"] {top: 0;}
+   .contact .main-contact-text {padding: 4em 0 3em;}
+   .contact .contact-info #map-canvas {width: 100%;}
+   .contact .contact-info .location-info {width: 100%;}
+   .form-item.webform-component-file .description {display: none;}
+
+}

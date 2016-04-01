@@ -1,0 +1,922 @@
+// Top Section
+.agency-intro {
+    @media (min-width: @small-screen) {
+        width: 100%; margin: 0 auto; padding: 1.5em 0 2em 0; float: left; background: @white url('@{image-path}/step-pattern.png') repeat;
+    }
+    @media (min-width: @small-med-screen) {
+        padding: 2.25em 0 2.5em 0;
+    }
+    @media (min-width: @medium-screen) {
+        padding: 5em 0;
+    }
+
+    .container {
+        @media (min-width: @small-screen) {
+            overflow: visible;
+        }
+        header {
+            padding: 0 0;
+            @media (min-width: @small-screen) {
+                text-align: center;
+            }
+            @media (min-width: @small-med-screen) {
+                text-align: left;
+            }
+            p {
+                 margin-bottom: 0;
+            }
+        }
+    }
+    .highlighted-intro {
+        width: 100%; display: block; position: relative;
+        h3 {
+            .batman-bold; text-align: center; font-size: 1em; color: @recess-red; width: 25%; margin: 0 auto; padding-left: 2em;
+            &:before {
+                content: ""; border-top: 1px solid @recess-red; width: 30%; position: absolute; top: .5em; left: 0; 
+            }
+            &:after {
+                content: ""; border-top: 1px solid @recess-red; width: 30%; position: absolute; top: .5em; right: 0; 
+            }
+        }
+        p {
+            font-size: 1em; padding: .25em 1em; text-align: center;
+        }
+        &.mission {
+            h3 {
+                background: url('@{image-path}/icon_mission.png') no-repeat left center;
+            }
+        }
+        &.vision {
+            h3 {
+                background: url('@{image-path}/icon_vision.png') no-repeat left center;
+            }
+        }
+        &.values {
+            h3 {
+                background: url('@{image-path}/icon_values.png') no-repeat left center;
+            }
+        }
+    }
+    #slider-pagination {
+        @media (min-width: @small-screen) {
+            width: 100%; margin: 0 auto; padding: 0 0; position: absolute; bottom: .5em; z-index: 999; text-align: center;
+        }
+        @media (min-width: @medium-screen) {
+            bottom: 1em;
+        }
+        a {
+            @media (min-width: @small-screen) {
+                width: .75em; height: .75em; margin: 0 .25em; .border-radius(50%); display: inline-block; border: 2px solid @recess-red; background: @white;
+            }
+            @media (min-width: @medium-screen) {
+                width: 1.1em; height: 1.1em; margin: 0 .5em;
+            }
+            span {
+                visibility: hidden;
+            }
+            &.selected {
+                background: @recess-red;
+            }
+        }
+    }
+    .slider-container {
+        position: relative;
+    }
+}
+
+
+// Approach
+.approach {
+    width: 100%; /*margin: 0 auto;*/ margin-bottom: 0; float: left; background: @light-grey; border-bottom: 1px solid @light-grey-2; text-align: center;
+    @media (min-width: @small-med-screen) {
+        //padding: 2.625em 0;
+    }
+    .approach-intro {
+        width: 100%; /*margin: 0 auto;*/ float: left; text-align: left;
+        figure.approach-intro-image {
+            @media (min-width: @small-screen) {
+                display: block; width: 100%; margin-left: 0; margin-right: 0; float: left; overflow: hidden;
+            }
+            @media (max-width: 767px) { 
+                margin: 0;
+            }
+            @media (min-width: @med-large-screen) {
+                width: 50%; /*margin: 0 auto;*/
+            }
+            img {
+                @media (min-width: @small-screen) {
+                    display: block; width: 100%; /*margin: 0 auto;*/ padding: 0 0; float: left;
+                }
+            }
+        }
+        .approach-intro-text {
+            @media (min-width: @small-screen) {
+                display: block; padding-top: 1.5em; padding-bottom: 1.5em; float: left; text-align: center;
+            }
+            @media (min-width: @medium-screen) {
+                padding-top: 4em; padding-bottom: 4em;
+            }
+            header {
+                display: block; width: 100%; margin: 0 auto; float: left;
+            }
+            p {
+                //.big-p;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .approach-text {
+        text-align: left; padding: 2em;
+    }
+    .flip-cards {
+        .flip {
+            @media (min-width: @medium-screen) {
+                font-size: .8em; height: 18.3125em;
+            }
+            @media (min-width: @med-large-screen ) {
+                font-size: .9em; height: 18.3125em;
+            }
+            @media (min-width: @med-large-screen ) {
+                font-size: 1em; height: 16.3125em;
+            }
+            .card {
+                .front {
+                    .card-image {
+                        padding: 4em 2em 1em 2em;
+                    }
+                }
+                .back {
+                    padding: 1em !important; 
+                    @media (min-width: @small-med-screen) {
+                        border-right: 1px solid @white !important; border-bottom: 1px solid @white !important; box-sizing: border-box;
+                    }
+                    p {
+                        font-size: .9em;
+                    }
+                    .card-image-back { position: relative;
+                        img {
+                            max-height: 2em; text-align: center;
+                        }
+                        &:before {
+                            content: ""; border-top: 1px solid @white; display: block; position: absolute; left: 0; top: 1em; width: 40%;
+                        }
+                        &:after {
+                            content: ""; border-top: 1px solid @white; display: block; position: absolute; right: 0; top: 1em; width: 40%;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 583px) { 
+            .flip {
+                .front {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.services {
+    overflow-x: hidden; width: 100%; float: left;
+    blockquote {
+        display: block; width: 100%; margin: 0 auto; background: @recess-red; color: @white; border: none; text-align: center;
+        @media (min-width: @small-screen) {
+            padding: 1.5em 1.5em;
+        }
+        @media (min-width: @small-med-screen) {
+            padding: 2em 2em;
+        }
+        @media (min-width: @medium-screen) {
+            padding: 2.625em 2.625em;
+        }
+        h4 {
+            @media (min-width: @small-screen) {
+                margin: 0 auto; font-style: normal; font-weight: 300; font-size: 150%; .klinic-slab-bold;
+            }
+            @media (min-width: @small-med-screen) {
+                font-size: 200%;
+            }   
+            @media (min-width: @medium-screen) {
+                font-size: 260%;
+            }
+        }  
+        p {
+            @media (min-width: @small-screen) {
+                margin: 0 auto; padding: 0 0; .batman-medium; font-weight: 400; font-size: 100%;
+            }
+            @media (min-width: @small-med-screen) {
+                font-size: 140%;
+            }
+            @media (min-width: @medium-screen) {
+                font-size: 180%;
+            }
+        }
+    }
+    .services-inner {
+        clear: both; float: left; width: 100%;
+    }
+    .services-intro {
+        width: 100%; /*margin: 0 auto;*/ float: left; text-align: left;
+        figure.services-intro-image {
+            @media (min-width: @small-screen) {
+                display: block; width: 100%; margin-left: 0; margin-right: 0; float: left; overflow: hidden;
+            }
+            @media (max-width: 767px) { 
+                margin: 0;
+            }
+            @media (min-width: @med-large-screen) {
+                width: 50%; 
+            }
+            img {
+                @media (min-width: @small-screen) {
+                    display: block; width: 100%; /*margin: 0 auto;*/ padding: 0 0; float: left;
+                }
+            }
+        }
+        .services-intro-text {
+            @media (min-width: @small-screen) {
+                display: block; padding-top: 1.5em; padding-bottom: 1.5em; float: left; text-align: center; 
+            }
+            @media (min-width: @medium-screen) {
+                padding-top: 4em; padding-bottom: 4em;
+            }
+            header {
+                display: block; width: 100%; margin: 0 auto; float: left;
+            }
+            p {
+                //.big-p;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .services-text {
+        text-align: left; padding: 2em;
+    }
+    .flip-cards {
+        width: calc(100% + 1px)!important;
+        .flip {
+            @media (min-width: @medium-screen) {
+                font-size: .9em;
+            }
+            @media (min-width: @med-large-screen ) {
+                font-size: 1em;
+            }
+            .card {
+                .front {
+                    .card-image {
+                        padding: 4em 2em 1em 2em;
+                    }
+                    //border-bottom: 1px solid @dark-grey-1;
+                }
+                .back {
+                    padding: 1em !important;
+                    @media (min-width: @small-med-screen) {
+                        border-right: 1px solid @white !important; border-bottom: 1px solid @white !important; box-sizing: border-box;
+                    }
+                    @media (min-width: @medium-screen) {
+                        padding: .75em !important;
+                    }
+                    @media (min-width: @med-large-screen) {
+                        padding: 1em !important;
+                    }
+                    p {
+                        font-size: .9em; margin-bottom: .5em;
+                    }
+                    .card-image-back { position: relative;
+                        img {
+                            max-height: 2em; text-align: center;
+                        }
+                        &:before {
+                            content: ""; border-top: 1px solid @white; display: block; position: absolute; left: 0; top: 1em; width: 40%;
+                        }
+                        &:after {
+                            content: ""; border-top: 1px solid @white; display: block; position: absolute; right: 0; top: 1em; width: 40%;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                .card {
+                    .front {
+                        border-bottom: 1px solid @white !important;
+                    }
+                }
+            }
+        }
+        @media (max-width: 583px) { 
+            .flip {
+                .front {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+//Approach Flip Cards
+.page-node-2 {
+    .leaderboard {
+        min-height: 0;
+    }
+    .flip-cards {
+        width: 100%; float: left; margin: 0 auto 0;
+        .flip {
+            .card {
+                @media (min-width: @small-screen) {
+                    padding: 1.5em 5%; border-bottom: 1px solid @white;
+                }
+                @media (min-width: @small-med-screen) {
+                    height: 100%; margin: 0; padding: 0 0 0 0; background: none; border-bottom: none; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transform-style: preserve-3d; .transition(all 300ms ease-in);
+                    &.light-colored {
+                        background: none;
+                    }
+                    &.flipped {
+                        width: 100%; height: 100%; margin-top: 0; margin-left: 0%; position: relative; z-index: 2; .transform(rotateY(-180deg));
+                        .back {
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+                @media (min-width: @medium-screen) {
+                    border-bottom: none;
+                }
+
+                .face {
+                    .icon {
+                        @media (min-width: @small-screen) {
+                            margin: 0 auto .125em auto;
+                        }
+                        @media (min-width: @small-med-screen) {
+                            margin: 17% auto .125em auto;
+                        }
+                        @media (min-width: @medium-screen) {
+                            margin: 20% auto .125em;
+                        }
+                    }
+                }
+                .back {
+                    @media (min-width: @small-screen) {
+                        border: none;
+                    }
+                    @media (min-width: @medium-screen) {
+                        padding: 1.5em 1.5em;
+                    }
+                }
+            }
+            &:last-child {
+                .card {
+                    .front {
+                         @media (min-width: @small-med-screen) {
+                            border: 1px solid @dark-grey-1;
+                        }
+                    }
+                }
+            }
+        }
+        &.light-colored {
+            .flip {
+                .card {
+                    @media (min-width: @medium-screen) {
+                        border-bottom: 1px solid @white;
+                    }
+                    .front {
+                        background: @mid-grey; color: @dark-grey-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Team
+.super-squad {
+    @media (min-width: @small-screen) {
+        width: 100%; margin: 0 auto; padding: 1em 0; float: left; background: @white url('@{image-path}/step-pattern.png') repeat; border-bottom: 1px solid @light-grey-2;
+    }
+    @media (min-width: @small-med-screen) {
+        padding: 4em 0 2em;
+    }
+    header {
+        text-align: center; color: @text-grey; margin: 2em auto 4em;
+    }
+    div.container {
+        .super-squad-profiles {
+            width: 100%; margin: 0 auto; padding: 0 0; float: left; text-align: center;
+        }
+        > button {
+            @media (min-width: @small-screen) {
+                display: block; margin: 0 auto; float: none;
+            }
+            @media (min-width: @small-med-screen) {
+                max-width: 50%;
+            }
+            @media (min-width: @medium-screen) {
+                max-width: 33.33%;
+            }
+        }
+    }
+
+    // Bio Styles
+    article.bio {
+        @media (min-width: @small-screen) {
+            width: 100%; display: block; margin-bottom: 0em; border-bottom: 3px solid @white; float: left; position: relative; text-align: center; overflow: hidden; /*.transition(all 300ms ease-in);*/ .perspective(800);
+        }
+        @media (min-width: @small-med-screen) { 
+           margin-bottom: 1.5em; width: 46.09375%; 
+        }  
+        @media (min-width: @medium-screen) {
+            text-align: left; overflow: visible; border-bottom: none; cursor: pointer; 
+        }
+        @media (min-width: @med-large-screen) { 
+            width: 29.427%;
+        }
+        @media (min-width: @huge-screen) { 
+            width: 21.66%;
+        }
+
+        // @media (max-width: 1175px) { 
+        //     width: 30%; margin-left: 1.66%; margin-right: 1.66%;
+        // }
+        // @media (max-width: 840px) { 
+        //     width: 45%; margin-left: 2.5%; margin-right: 2.5%; overflow: visible;
+        //     header {
+        //     //    .opacity(1) !important;
+        //     }
+        // }
+        //583px;
+        // @media (max-width: @medium-screen) { 
+        //     //width: 96.09375%; margin-right: 1.95%; margin-left: 1.95%; overflow: hidden;
+        //     .bio-front {
+        //         header {
+        //             .opacity(1) !important;
+        //         }
+        //     }
+        // }
+        
+        &.flipped-squad {
+            z-index: 2;
+            @media (min-width: @medium-screen) and (max-width: 66em) {
+                // Same Width & Margins as a full width within grid
+                //width: 96.09375%; margin-right: 1.95%; margin-left: 1.95%;
+            }
+        }
+        &.animate-in {
+            // margin-top: 100px;
+        }
+        .card {
+            @media (min-width: @small-screen) {
+                width: 100%; overflow: visible;
+            }
+            @media (min-width: @small-screen) and (max-width: @small-med-screen) {
+                &.flipped {
+                    .bio-front {
+                        > button a span {
+                            .transform(rotate(45deg));
+                        }
+                    }
+                    .bio-back {
+                        margin-top: 0;
+                    }
+                }
+            }
+            @media (min-width: @small-med-screen) {
+                height: 100%; position: absolute; top: 0; border: 1px solid @grey; .transform-style(preserve-3d); .transition(all 300ms ease-in);
+                &.flipped {
+                    position: absolute; top: 0; z-index: 2; .transform( rotateY(-180deg) ); 
+                }
+            }
+        }
+        > img {
+            @media (min-width: @small-screen) {
+                //display: none;
+            }
+            @media (min-width: @small-med-screen) {
+                display: block;
+            }
+        }
+        .bio-front, .bio-back {
+            @media (min-width: @small-screen) {
+                width: 100%; height: auto; margin: 0 auto; padding: 0 0; float: left; position: relative; .backface-visibility(hidden);
+            }
+            @media (min-width: @small-med-screen) {
+                width: 100%; height: 100%; margin: 0 auto; padding: 0 0; float: left; position: absolute; top: 0; z-index: 2; .backface-visibility(hidden);
+            }
+            > button {
+                 right 1em; bottom: 1em; z-index: 100; position: relative; display: none;
+            }
+        }
+
+        // Front Face
+        .bio-front {
+            overflow: hidden;
+            > img {
+                display: block; width: 100%; max-width: 120%; margin: 0 auto; padding: 0 0; float: left; position: absolute; .transition(all 350ms ease-in-out);
+            }
+            &:hover {
+                > img {
+                    width: 105%;
+                }
+            }
+            @media (min-width: @small-screen) {
+                position: absolute; z-index: 2; top: 0;
+                > img {
+                    position: relative;
+                }
+                &:hover {
+                    > img {
+                        width: 100%;
+                    }
+                }
+            }
+            @media (min-width: @small-med-screen) {
+                position: absolute; z-index: 2; top: 0;
+            }
+            header {
+                @media (min-width: @small-screen) {
+                    display: block; width: 100%; height: 100%; background: rgba(0,0,0, 0.3); margin: 0 auto; padding: 0 1.25em; float: left; position: absolute; top: 0; left: 0; color: @white; .opacity(1);
+                }
+                @media (min-width: @medium-screen) {
+                    padding: 0 1em; text-align: center; .opacity(0); width: 100%; height: 100%; background: rgba(0,0,0, 0.7); 
+                    h3 {
+                        position: relative; top: 3em; 
+                    }
+                    h4 {
+                        position: relative; top: 3em; 
+                    }
+                }
+                h3 {
+                    margin-bottom: 0; .batman-medium; font-size: 1.75em; letter-spacing: .015em; text-transform: uppercase; 
+                }
+                h4 {
+                    margin-bottom: 0; .batman-light; font-size: 1.375em; letter-spacing: .01em; text-transform: none;
+                }
+            }
+            > button {
+                position: absolute; right: 1em; bottom: 1em;
+            }
+        }
+
+        // Back Face
+        .bio-back {
+            @media (min-width: @small-screen) {
+                margin-top: -200%; z-index: -2; .transition(all 500ms ease-in-out);
+            }
+            @media (min-width: @small-med-screen) {
+                margin-top: 0; padding: 0 0; .transition(none); .transform(rotateY(-180deg)); position: absolute; top: 0; z-index: 2;
+            }
+            .back-image {
+                 @media(min-width: @small-screen) {
+                    display: none;
+                }
+                @media(min-width: @small-med-screen) {
+                    display: block; position: relative; z-index: 1;
+                }
+                span {
+                    display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: url('@{image-path}/back-overlay.png')
+                }
+                img {
+                    @media (min-width: @small-screen) {
+                        display: block; width: 100%; margin: 0 auto; padding: 0 0;
+                    }
+                }
+            }
+            .person-bio {
+                @media (min-width: @small-screen) {
+                    display: block; width: 100%; margin: 0 auto; padding: 1.25em 1.25em; float: left; background: @white; border: 1px solid @grey; border-top: none;
+                }
+                @media (min-width: @small-med-screen) {
+                    height: 100%; padding: 1.25em 1.25em; background: none; border: none; position: absolute; top: 0; z-index: 2; color: @white;
+                }
+                @media (min-width: @medium-screen) { 
+                    padding: 1.25em;
+                }
+                header {
+                    @media (min-width: @small-screen) {
+                        display: none; width: 100%; margin: 0 auto 1em auto; float: left; color: @white;
+                    }
+                    @media (min-width: @small-med-screen) {
+                        display: block; padding: 0; text-align: center;
+                    }
+                    @media (min-width: @medium-screen) { 
+                        margin-bottom: .5em;
+                    }
+                    h3 {
+                        margin-bottom: 0; .batman-medium; font-size: 1.5em; letter-spacing: .015em; text-transform: uppercase; .text-shadow(2px 1px 0 #000);
+                        @media (min-width: @small-med-screen) {  
+                            font-size: 1.3em;
+                        }
+                        @media (min-width: @medium-screen) {  
+                            font-size: 1.5em;
+                        }
+                        @media (min-width: @med-large-screen) {  
+                            font-size: 1.3em;
+                        }
+                        @media (min-width: @large-screen) {  
+                            font-size: 1.5em;
+                        }   
+                    }
+                    h4 {
+                        margin-bottom: 0; .batman-light; font-size: 1em; letter-spacing: .01em; text-transform: none; .text-shadow(1px 1px 0 #000);
+                    }
+                }
+                .bio-content {
+                    display: block; width: 100%; margin: 0 auto; padding: 0 0; float: left;
+                    .main-bio {
+                        width: 100%; padding: 0 0; float: left;
+                        @media (min-width: @small-screen) {
+                            margin: 0 auto 1.25em;
+                        }
+                        @media (min-width: @small-med-screen) {
+                            margin: 0 auto 1.25em;
+                        }
+                        @media (min-width: @medium-screen) {
+                            margin: 0 auto 1.25em;
+                        }
+                        p {
+                            @media (min-width: @small-screen) {
+                                margin-bottom: 0; font-size: 100%; line-height: 150%;
+                            }
+                            @media (min-width: @small-med-screen) {
+                                /*font-size: 125%; line-height: 144%; */ font-size: .8em;
+                                a {
+                                    color: @white; text-decoration: underline;
+                                }
+                            }
+                            @media (min-width: @medium-screen) {
+                                margin-bottom: 0; font-size: .9em; line-height: 150%;
+                            }
+                            @media (min-width: @med-large-screen) { 
+                                font-size: .85em;
+                            }
+                            @media (min-width: @large-screen) { 
+                                font-size: .9em;
+                            }   
+
+                        }
+                    }
+                    .wicked-bad {
+                        width: 100%; margin: 0 auto; padding: 0 0; float: left;
+                        > section {
+                            @media (min-width: @small-screen) {
+                                width: 100%; margin: 0 auto; padding: 0 0; float: left;
+                            }
+                            @media (min-width: @small-med-screen) {
+                                width: 50%;
+                            }
+                            p {
+                                display: block; width: 100%; margin-bottom: .75em; float: left; .batman-bold; font-size: .88em;
+                            }
+                            ul {
+                                @media (min-width: @small-screen) {
+                                    display: block; width: 100%; margin: 0 auto .5em auto; padding: 0 0; float: left; list-style: disc outside none;
+                                }
+                                @media (min-width: @small-med-screen) {
+                                    padding-right: .5em;
+                                }
+                                li {
+                                    display: block; width: 100%; margin-bottom: .25em; float: left; font-weight: 100; font-size: .9em; line-height: 120%; .batman;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > button {
+                @media (min-width: @small-screen) {
+                    display: none;
+                }
+                @media (min-width: @small-med-screen) {
+                    display: none; position: absolute; right: 1em; bottom: 1em;
+                }
+            }
+        }
+    }
+    .join {
+        clear: both;
+        button {
+            margin: 1em auto !important;
+        }
+    }
+    @media (max-width: 767px) { 
+        article.bio .bio-front header { .opacity(1)!important;}
+    }
+}
+
+// Accolades
+.accolades {
+    @media (min-width: @small-screen) {
+        width: 100%; margin: 0 auto; padding: 1em 0; float: left;
+    }
+    @media (min-width: @medium-screen) {
+        padding: 5em 0;
+    }
+    .container {
+        overflow: visible;
+        @media (min-width: @small-screen) and (max-width: @small-med-screen) {
+            width: 100%; margin: 0 auto; float: left;
+        }
+    }
+    .accolades-info {
+        @media (min-width: @small-screen) and (max-width: @small-med-screen) {
+            width: 90%; margin-left: 5%; margin-right: 5%; text-align: center;
+        }
+        @media (min-width: @medium-screen) {
+            margin-left: auto; margin-right: auto; text-align: left;
+        }
+    }
+    .nailed-it {
+        text-align: center; color: @text-grey;
+        @media (min-width: @small-screen) and (max-width: @small-med-screen) {
+            width: 90%; margin-left: 5%; margin-bottom: .5em; margin-right: 5%;
+        }
+        @media (min-width: @small-med-screen) {
+            margin-left: auto; margin-bottom: 1em; margin-right: auto;
+        }
+        > * {
+            display: block; width: 100%; padding: 0 0; float: left;
+        }
+        .count {
+            @media (min-width: @small-screen) {
+                margin-bottom: 0; .batman-bold; font-size: 2.5em; line-height: 100%;
+            }
+            @media (min-width: @small-med-screen) {
+                font-size: 375%;
+            }
+            @media (min-width: @medium-screen) {
+                font-size: 500%;
+            }
+        }
+        .line-2 {
+            @media (min-width: @small-screen) {
+                margin-bottom: 0; .batman-medium; font-size: 1em; line-height: 125%;
+            }
+            @media (min-width: @small-med-screen) {
+                font-size: 125%;
+            }
+            @media (min-width: @medium-screen) {
+                font-size: 150%
+            }
+        }
+        .line-3 {
+            @media (min-width: @small-screen) {
+                margin-bottom: 0; .batman-light; font-size: 1em; line-height: 125%;
+            }
+            @media (min-width: @small-med-screen) {
+                font-size: 125%;
+            }
+            @media (min-width: @medium-screen) {
+                font-size: 150%
+            }
+        }
+    }
+}
+.flip-cards.accolade-cards {
+    clear: both;
+    .flip {
+        @media (min-width: @small-screen) { 
+            width: 33.33%; height: 9em; background: @mid-grey;
+            .award-image { 
+                padding: 1em;
+                img {max-height: 75%;}
+            }
+        }
+        @media (min-width: @small-med-screen) { 
+            width: 25%; height: 9em; background: none;
+            .award-image {
+                padding: 1em;
+                img {max-height: 75%;}
+            }
+        }
+        @media (min-width: @medium-screen) { 
+            width: 20%; height: 9em;
+        }
+        @media (min-width: @med-large-screen) { 
+            width: 16.667%; height: 9em;
+        }
+        @media (min-width: @med-large-screen) { 
+            //width: 14.285%; height: 9em;
+        }
+        @media (min-width: @large-screen) { 
+            width: 12.5%; height: 9em;
+        }
+        .card {
+            .back {
+                ul {
+                    display: none;
+                }
+            }
+        }
+        .card {
+            @media (min-width: @small-screen) {
+                background: @mid-grey; height: 100%; width: 100%; border: 1px solid @white;
+            }
+            @media (min-width: @small-med-screen) {
+                background: none;
+            }
+            .front {
+                cursor: initial; 
+                @media (min-width: @small-screen) {
+                    //display: none; 
+                }
+                @media (min-width: @small-med-screen) {
+                    display: block; color: @dark-grey-1;
+                }
+                @media (min-width: @medium-screen) {
+                    border-bottom: none;
+                }
+                h3 {
+                    .batman-bold; font-size: 1.125em; text-transform: none!important; text-align: center; color: inherit;
+                }
+                .icon {
+                    color: inherit;
+                }
+                .award-image {
+                    //position: relative; top: 50%; margin-top: -25%;
+                    img {
+                        padding: 0;
+                    }
+                }
+            }
+            .back {
+                @media (min-width: @small-screen) {
+                    display: none; 
+                }
+                @media (min-width: @small-med-screen) { 
+                    display: block; padding: .5em; text-align: left;
+                }
+                .award-image {
+                    padding: 0;
+                    img {
+                        max-width: 30%; max-height: 30%;
+                    }
+                }
+                h3 {
+                    @media (min-width: @small-screen) {
+                        color: @dark-grey-1;
+                    }
+                    @media (min-width: @small-med-screen) {
+                        color: @white; margin-bottom: 0; .batman-bold; position: absolute; bottom: .5em; font-size: 1em;
+                    }
+                }
+                ul {
+                    @media (min-width: @small-screen) {
+                        color: @dark-grey-1;
+                    }
+                    @media (min-width: @small-med-screen) {
+                        color: @white;
+                    }
+                }
+            }
+        } &:last-child {
+            .card {
+                .front {
+                    border: none; border-right: 1px solid @white;
+                }
+            }
+        }
+    }
+    //.no-flip {
+        // @media (min-width: @small-med-screen) { 
+        //     .award-image {
+        //         padding: 1em;
+        //         img {max-height: 7.5em;}
+        //     }
+        // }
+        // @media (min-width: @medium-screen) { 
+        //     width: 20%; height: 13em;
+        // }
+        // .card {
+        //     .back {
+        //         ul {
+        //             display: none;
+        //         }
+        //     }
+        // }
+    //}
+}
+
+.view-more {
+    @media (min-width: @small-screen) {
+        width: 100%; margin: 1em auto 0 auto; padding: 2em 0; float: left; text-align: center;
+    }
+    @media (min-width: @small-med-screen) {
+        margin: 2em auto 0 auto; 
+    }
+    button {
+      @media (min-width: @small-screen) {
+            margin-bottom: 0; clear: both;
+        }
+        @media (min-width: @small-med-screen) {
+            max-width: 50%;
+        }
+        @media (min-width: @medium-screen) {
+            max-width: 33.33%;
+        }  
+    }
+}

@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the views_infinite_scroll module.
+ */
+
+/**
+ * Implementation of hook_requirements().
+ */
+function views_infinite_scroll_requirements($phase) {
+  $requirements = array();
+  $module_path = drupal_get_path('module', 'views_infinite_scroll');
+  $library_path = module_exists('libraries') ? libraries_get_path('autopager') : NULL;
+
+  if (!(file_exists($module_path . '/js/jquery.autopager-too.js') || ($library_path && file_exists($library_path . '/jquery.autopager-too.js')))) {
+    $t = get_t();
+
+    if (file_exists($module_path . '/js/jquery.autopager-1.0.0.js') || ($library_path && file_exists($library_path . '/jquery.autopager-1.0.0.js'))) {
+      // Plugin needs updated.
+      $desc = $t('You should update your jQuery Autopager plugin to the <a href="https://raw.github.com/cristinawithout/jquery-autopager-too/master/jquery.autopager-too.js">jQuery Autopager Too</a> plugin. ');
+    }
+    else {
+      // Plugin doesn't exist.
+      $desc = $t('Views Infinite Scroll requires the <a href="https://raw.github.com/cristinawithout/jquery-autopager-too/master/jquery.autopager-too.js">jQuery Autopager Too</a> plugin. ');
+    }
+
+    if ($library_path) {
+      $desc .= $t('Either download and place this file into %dir or download the plugin using the <a href="http://drupal.org/project/drush">Drush</a> command %drush.', array('%dir' => $library_path, '%drush' => 'drush dl-autopager'));
+    }
+    else {
+      $desc .= $t('Either install the <a href="http://drupal.org/project/libraries">Libraries</a> module and place the downloaded plugin file into the libraries directory (usually %dir) or download the plugin using the <a href="http://drupal.org/project/drush">Drush</a> command %drush.', array('%dir' => 'sites/all/libraries/autopager', '%drush' => 'drush dl-autopager'));
+    }
+
+    $requirements['views_infinite_scroll_autopager'] = array(
+      'title' => 'JQuery Autopager Too plugin',
+      'description' => $desc,
+      'severity' => REQUIREMENT_WARNING,
+    );
+  }
+  return $requirements;
+}

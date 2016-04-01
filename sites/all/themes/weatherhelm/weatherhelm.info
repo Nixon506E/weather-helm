@@ -1,0 +1,42 @@
+name = Weatherhelm
+description = Custom Lux & Drupal Materialize
+core = 7.x
+
+scripts[] = js/materialize.js
+scripts[] = js/weatherhelm.js
+scripts[] = js/weatherhelm.settings.js
+scripts[] = js/masonry.pkgd.min.js
+scripts[] = js/imgloaded.js
+
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/style.css.less
+stylesheets[all][] = css/materialize.min.css
+
+regions[navigation] = Navigation
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+
+breakpoints[mobile] = (max-width: 480px)
+breakpoints[narrow] = (max-width: 768px)
+breakpoints[wide] = (max-width: 1024px)
+breakpoints[tv] = only screen and (max-width: 1382px)
+multipliers[mobile][] = 2x
+multipliers[narrow][] = 2x
+multipliers[wide][] = 2x
+multipliers[tv][] = 2x
+
+dependencies[] = jquery_update

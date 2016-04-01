@@ -1,0 +1,73 @@
+.page-node-3 {
+	.services {
+		width: 100%; float: left;
+		.container {
+			overflow: visible;
+		}
+		&.flip-cards {
+			.flip {
+				height: 100%; min-height: 35em;
+		    	.card {
+		      		&.flipped {
+		       			 -webkit-transform: rotatey(-180deg); width: 100%; height: 100%; margin-top:0 ; margin-left: 0%; position: relative; z-index: 2;
+				        .back {
+				          border-right: none;
+				        }
+		      		}
+		      		.back {
+		      			padding: 0;
+		      		}
+		      		.face {
+		      			text-align: left;
+		      		}
+		  		}
+		  	}
+		}
+		.service {
+			width: 100%; margin: 1em 0; position: relative;  /*min-height: 35em; -webkit-perspective: 1300px; -moz-perspective: 1300px; perspective: 1300px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden;*/
+			.mini-button {
+				position: absolute; top: 1em; right: 1em;
+				a.icon {
+					font-family: 'recess-icons'; font-size: 100%; margin: 0; line-height: 200%;
+				}
+			}
+			.outer {
+				width: 100%; position: relative;
+				img {
+					width: 100%;
+				}
+				h3 {
+					.batman-light; color: @white; text-transform: uppercase; font-size: 2.5em; line-height: 1em; position: absolute; top: 50%; margin-top: -.5em; text-align: center; width: 100%;
+				}
+			}
+			.inner {
+				width: 100%; float: left; background: @recess-red;
+				.left {
+					width: 50%; float: left; background: @recess-red; color: @white; padding: 2em;
+					h3 {
+						.batman-light; text-transform: uppercase;
+					}
+					p {
+						display: block; width: 100%;
+					}
+					ul {
+						float: left; width: 43%; margin-right: 2%; .klinic-slab; list-style: disc; 
+						li {
+							margin-left: 1em;
+						}
+					}
+				}
+				.right {
+					width: 50%; float: left; position: relative; 
+					img {
+						float: left;
+					}
+					.icon.overlay {
+						position: absolute; font-size: 13em; line-height: 1em; color: @white; top: 50%; margin-top: -.5em; display: block; width: 100%; text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+

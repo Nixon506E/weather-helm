@@ -1,0 +1,290 @@
+header[role="banner"], #page-header {
+	height: auto; background: transparent; z-index: 9990; border-bottom: 1px solid @mid-grey;
+	@media (min-width: @small-screen) {
+		width: 100%; height: @small-header-height; margin: 0 auto; float: left; position: absolute; background: @white;
+	}
+	@media (min-width: @medium-screen) {
+		height: auto;
+	}
+	.front & {
+		@media(min-width: @small-med-screen) {
+			position: absolute; top: 0;
+		}
+	}
+	&::after {
+		content: ''; display: table; width: 100%; height: 0; clear: both;
+	}
+	.recess-brand {
+		@media (min-width: @small-screen) {
+			display: inline-block; width: 100%; height: auto; margin: 0 auto 0 auto; padding: 1em 0; position: absolute; background: #fff; text-align: center; overflow: visible; z-index: 9997;
+		}
+		@media (min-width: @medium-screen) {
+			width: 13em; margin: 1.6875em 0 0 1.75em; padding: 0 0; float: left; overflow: visible; background: transparent;
+		}
+		@media (min-width: 55em) {
+			width: 15.3125em; margin: 2.025em 0 0 2.875em; background: transparent;
+		}
+		a {
+			@media (min-width: @small-screen) {
+				display: inline-block; width: 12em; margin: 0 0; padding: 0 0; text-align: center;
+			}
+			@media (min-width: @medium-screen) {
+				display: block; width: 100%; margin: 0 0; padding: 0 0; float: left;
+			}
+		}
+	}
+	.drawer-menu-button {
+		@media (min-width: @small-screen) and (max-width: @medium-screen) {
+			display: inline-block; width: 2.5em; height: 2.5em; margin: 0 auto; float: right; background: transparent; position: absolute; top: .88em; right: .88em; z-index: 9999; .transition(all 200ms ease-in);
+			span {
+			    display: inline-block; width: 2.25em; height: .125em; background: @grey; position: absolute; top: 1.125em; left: .125em; border-radius: .125em;
+			    &::before, &::after {
+			       content: ''; display: inline-block; width: 2.25em; height: .125em; background: @grey; position: absolute; left: 0; border-radius: .125em; .transition(all 200ms ease-in);
+			    }
+			    &::before {
+			      top: -300%;
+			    }
+			    &::after {
+			      bottom: -300%;
+			    }
+		  	}
+		  &.open {
+		    background: @recess-red; border-radius: 1.25em;
+		    span {
+		      background: rgba(255, 255, 255, 0);
+		      &::before, &::after {
+		        width: 1.5em; background: @white;
+		      }
+		      &::before {
+		        top: 0; left: .375em; .transform(rotate(45deg));
+		      }
+		      &::after {
+		        bottom: 0; left: .375em; .transform(rotate(-45deg));
+		      }
+		    }
+		  }
+		  &:hover {
+		  	&::before {
+		  		margin-bottom: 10px;
+		  	}
+		  }
+		}
+		@media (min-width: @medium-screen) {
+			display: none; position: relative;
+		}
+		span {
+
+		}
+	}
+}
+
+// SVG Logo Styles
+#recess-logo {
+	width: 100%; float: left; position: relative; overflow: visible;
+	#recess {
+		* {
+			fill: @recess-grey; position: relative;
+		}
+	}
+	#creative, #ball {
+		* {
+			fill: @recess-red; position: relative;
+		}
+	}
+	&:hover {
+		#ball {
+			@media (min-width: @medium-screen) {
+				.animate(bounce 550ms infinite alternate);
+			}
+		}
+	}
+
+	&&&.open {
+		#recess, #creative, #ball {
+			* {
+				fill: @white;
+			}
+		}
+	}
+}
+.bouncing {
+	#recess-logo {
+		#ball {
+			@media (min-width: @medium-screen) {
+				.animate(bounce 550ms infinite alternate);
+			}
+		}
+	}
+}
+
+#main-nav {
+	//display: block;width: auto; margin: 0 1.75em 0 0; padding: 0 0; float: right; background: none; position: relative; top: auto; left: auto;
+	@media screen and (min-width: @small-screen) {
+		display: block; width: 100%; height: 100%; margin: 0 auto; padding: 0 0; float: left; background: rgba(255, 255, 255, .9); position: fixed; top: -300%; left: 0; z-index: 9989; .transition(all 250ms ease-in);
+		&.open {
+			top: 0;
+		}
+	}
+	@media screen and (min-width: @medium-screen) {
+		width: auto; margin: 0 1.75em 0 0; padding: 0 0; float: right; background: none; position: relative; top: auto; left: auto;
+	}
+	@media screen and (min-width: 55em) {
+		margin: 0 2.875em 0 0;
+	}
+	.site-nav {
+		@media screen and (min-width: @small-screen) {
+			display: block; width: 100%; margin: 4.5em auto 0 auto; float: left;
+			ul {
+				display: block; width: 100%; float: left; margin: 0 auto; padding: 0 0;
+				li {
+					display: block; width: 100%; margin: 0 auto; float: left; text-align: center;
+					a {
+						display: block; width: 100%; margin: 0 auto; padding: 1em 0; .batman-bold; font-size: .8125em; letter-spacing: .01em; color: @nav-grey; text-decoration: none; text-transform: uppercase; text-align: center;
+						&:hover, &.active, &.active-trail {
+							color: @recess-red;
+						}
+					}
+				}
+			}
+			.expanded {
+				.menu {
+					display: none;
+				}
+			}
+		}
+		@media screen and (min-width: @medium-screen) {
+			margin: 0 auto;
+			ul {
+				display: block; margin: 0 0 0 0; padding: 0 0 0 0; float: right;
+				li {
+					width: auto; margin: 0 0 0 1em; padding: 0 0; text-align: left;
+					a {
+						display: block; margin: 0 0; padding: 3.125em 0 3em 0; float: left; position: relative; color: @recess-red; text-align: right; .transition(all 150ms ease-in-out);
+						&::after {
+							content: ''; display: inline-block; width: .5em; height: .5em; margin-left: -.25em; background: @recess-red; border-radius: .25em; position: absolute; bottom: 35%; left: 50%; text-align: center; opacity: 0; .transition(all 150ms ease-in-out);
+						}
+						&:hover {
+							&::after {
+								bottom: 25%; opacity: 1;
+							}
+						}
+						&.active, &.active-trail {
+							color: @recess-red;
+							&::after {
+								bottom: 25%; opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+		@media (min-width: 55em) {
+			ul {
+				li {
+					margin: 0 0 0 1.5em;
+				}
+			}
+		}
+	}
+	.social-nav {
+		@media (min-width: @small-screen) {
+			display: block; width: 100%; margin: 0 auto; padding: 0 0; position: absolute; bottom: 1.5em; text-align: center;
+			a {
+				margin: 0 .4em; font-size: 1.5em; color: @recess-red; .transition(color 150ms ease-in);
+				&:last-child {
+					margin: 0 .4em;
+				}
+				&:hover {
+					color: darken(@recess-red, 15%);
+				}
+			}
+
+		}
+		@media (min-width: @medium-screen) {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: @small-screen) {
+	.front {
+		header#page-header {	
+			top: 0px!important; 
+		}
+	}
+}
+
+.no-svg {
+	#page-header {
+		.recess-brand {
+			a {
+				@media (min-width: @small-screen) {
+					background: url('@{image-path}/recess-logo.png') no-repeat 0 0; background-size: 100%; width: 192px; height: 31px;
+				}
+				@media (min-width: @medium-screen) {
+					background: url('@{image-path}/recess-logo-white.png') no-repeat 0 0; display: block; width: 245px; height: 30px;
+				}
+			}
+		}
+	}
+	.page-node-4 #page-header .recess-brand a,
+    .page-node-5 #page-header .recess-brand a,
+    .page-node-6 #page-header .recess-brand a,
+    .page-node-7 #page-header .recess-brand a,
+    .page-node-94 #page-header .recess-brand a,
+    .node-type-job-posting #page-header .recess-brand a {
+    	background-image: url('@{image-path}/recess-logo.png');
+    	@media (min-width: @small-screen) {
+			background-image: url('@{image-path}/recess-logo.png');
+		}
+		@media (min-width: @medium-screen) {
+			background-image: url('@{image-path}/recess-logo.png');
+		}
+    }
+}
+
+// Page Based Styles - Use Mixin .page-header-colors (@header-bg-color, @svg-recess-fill, @svg-creative-fill, @svg-ball-fill, @link-color, @active-link-color)
+@media (min-width: @medium-screen) {
+	// Home, About, Services, Generic Work Template, Post Template
+	.page-node-8, .page-node-2, .page-node-3, .node-type-work, .node-type-article, .node-type-case-study {
+		.page-header-colors (transparent, @white, @white, @white, @white, @white);
+		header[role="banner"], #page-header { 
+			border-bottom: none;
+		}
+	}
+	// Work, Scuttlebutt, Careers, Contact
+	.page-node-4, .page-node-5, .page-node-6, .page-node-7, .page-node-144, .node-type-job-posting, .node-type-article.no-leaderboard {
+		.page-header-colors (@white, @recess-grey, @recess-red, @recess-red, @nav-grey, @recess-red);
+		header[role="banner"], #page-header { 
+			border-bottom: 1px solid @mid-grey;
+		}
+	}
+	.page-node-94, .page-node-2 {
+		.page-header-colors (transparent, @recess-grey, @recess-red, @recess-red, @nav-grey, @recess-red);
+	}
+}
+
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+	background-color: none;
+	border-color: none;
+	color: none;
+	text-shadow: none; 
+}
+.pace .pace-progress {
+  background: #f26663;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  height: 3px;
+
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+.pace-inactive {
+  display: none;
+}

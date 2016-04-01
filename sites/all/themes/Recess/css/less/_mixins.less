@@ -1,0 +1,415 @@
+// Breakpoints for Media Queries
+// Breakpoint Name Variables
+@small-screen: 18.75em;
+@small-med-screen: 36.5em;
+@medium-screen: 48em;
+@med-large-screen: 60em;
+@large-screen: 69em;
+@huge-screen: 85em;
+
+// UI Colors
+@text-grey: #383838;
+@white: #fff;
+@light-grey: #f5f5f5; // Light BGs
+@light-grey-2: #e6e6e6;
+@mid-grey: #e3e3e3; // Grey On Top of Light BGs and/or Slightly Darker Grey BGs
+@grey: #cccccc; // Section Borders, etc.
+@grey-2: #999999;
+@dark-grey-1: #383838;
+@dark-grey-2: #262626;
+@nav-grey: #595959;
+@recess-red: #f26663;
+@recess-grey: #7c7c7c;
+@heart-red: #f04d24;
+@twitter-blue: #4099ff;
+@facebook-blue: #3b5998;
+
+// Brand/Client Colors
+@plotter-green: #529140;
+@hello-orange: #fb9d5b;
+
+// Path Mixins
+@image-path:'../../images';
+
+// Other
+@small-header-height: 4.125em;
+@medium-header-height: 5.8125em;
+
+// Scuttlebutt Padding
+@small-butt: 1.5em 1.5em;
+@medium-butt: 2em 2em;
+
+// Scuttlebutt Mini-Button Placement - To Reposition Based on Padding Being on Articles
+.scuttlebutton {
+  @media (min-width: @small-screen) {
+    position: absolute; top: -.5em; right: -.5em;
+  }
+  @media (min-width: @medium-screen) {
+    top: -1em; right: -1em;
+  }
+}
+
+// Text Shadow Mixin
+.text-shadow(@text-shadow-string) {
+  -webkit-text-shadow: @text-shadow-string;
+  -moz-text-shadow: @text-shadow-string;
+  -ms-text-shadow: @text-shadow-string;
+  text-shadow: @text-shadow-string;
+}
+
+// Transition & Transform Mixins
+.transition (@transition-string) {
+  -webkit-transition: @transition-string;
+  -moz-transition: @transition-string; 
+  -ms-transition: @transition-string; 
+  -o-transition: @transition-string; 
+  transition: @transition-string;
+}
+
+// Translate Mixin
+.translate (@x-value, @y-value) {
+  -webkit-transform: translate(@x-value, @y-value);
+  -moz-transform: translate(@x-value, @y-value);
+  -ms-transform: translate(@x-value, @y-value);
+  -o-transform: translate(@x-value, @y-value);
+  transition: translate(@x-value, @y-value);
+}
+
+// Transform Mixin
+.transform (@transform-string) {
+  -webkit-transform: @transform-string;
+  -moz-transform: @transform-string; 
+  -ms-transform: @transform-string; 
+  -o-transform: @transform-string; 
+  transform: @transform-string;
+}
+
+// Backface Visibility Mixiin
+.backface-visibility(@backface-string) {
+  -webkit-backface-visibility: @backface-string;
+  -moz-backface-visibility: @backface-string;
+  -ms-backface-visibility: @backface-string;
+  backface-visibility: @backface-string;
+}
+
+// Transform Style Mixin
+.transform-style(@transform-style-string) {
+  -webkit-transform-style: @transform-style-string;
+  -moz-transform-style: @transform-style-string;
+  -ms-transform-style: @transform-style-string;
+  transform-style: @transform-style-string;
+}
+
+//Perspective Style Mixin
+.perspective(@perspective-style-string) {
+  -webkit-perspective: 800; 
+  -moz-perspective: 800px; 
+  -ms-perspective: 800;
+  perspective: 800;
+}
+
+//Opacity Mixin
+.opacity(@opacity) {
+  -webkit-opacity:    @opacity;
+  -moz-opacity:       @opacity;
+  -ms-opacity:        @opacity;
+  opacity:            @opacity;
+}
+
+// CSS Animation Mixins
+.keyframes (@keyframes-string) {
+  @-webkit-keyframes: @keyframes-string;
+  @-moz-keyframes: @keyframes-string;
+  @-o-keyframes: @keyframes-string;
+  @keyframes: @keyframes-string;
+}
+
+.animate(@animation-string) {
+  -webkit-animation: @animation-string;
+  -moz-animation: @animation-string;
+  -o-animation: @animation-string;
+  animation: @animation-string;
+}
+
+.border-radius (@radius: 4px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+
+    -moz-background-clip:    padding;
+    -webkit-background-clip: padding-box;
+    background-clip:         padding-box;
+}
+
+// Buttons
+.button-type (@button-color, @button-text-color, @button-bg, @button-hover-bg) {
+  border-color: @button-color; color: @button-color;
+    &:hover { background: @button-hover-bg; border-color: @button-color; color: @button-text-color; }
+    &:active { background: darken(@button-hover-bg, 15%); border-color: darken(@button-color, 15%); color: @button-text-color; }
+    a { background: @button-bg; border-color: @button-color; color: @button-color; 
+      &:hover { background: transparent; color: @button-text-color; }
+      &:active { background: transparent; border-color: darken(@button-color, 15%); transition: all 50ms, ease-in; }
+    }
+}
+
+.reverse-button-type (@button-color, @button-text-color, @button-bg, @button-hover-bg) {
+  background-color: transparent; border-color: @button-color; color: white;
+    &:hover { background: transparent; border-color: @button-color; color: @button-text-color; }
+    &:active { background: darken(@button-hover-bg, 15%); border-color: darken(@button-color, 15%); color: @button-text-color; }
+    a { background: @button-color; border-color: @button-color; color: white; 
+      &:hover { background: transparent; border-color: transparent; color: @button-color; }
+      &:active { background: transparent; border-color: darken(@button-color, 15%); transition: all, 50ms ease-in; color: white; }
+    }
+}
+
+// Mini Square Button
+.mini-button (@button-color, @button-text-color, @button-bg, @button-hover-bg) {
+  width: 2.75em; height: 2.75em; position: relative; border-color: @button-color; overflow: visible; color: @button-color;
+    &:hover { background: @button-hover-bg; border-color: @button-color; color: @button-text-color; }
+    &:active { background: darken(@button-hover-bg, 15%); border-color: darken(@button-color, 15%); color: @button-text-color; }
+    a { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: @button-bg; border-color: @button-color; text-align: center; color: @button-color; 
+      &:hover { background: transparent; color: @white; }
+      &:active { background: transparent; border-color: darken(@button-color, 15%); color: @white; transition: all 50ms, ease-in; }
+    }
+}
+
+.reverse-mini-button (@button-color, @button-text-color, @button-bg, @button-hover-bg) {
+  width: 2.75em; height: 2.75em; background-color: transparent; border-color: @button-color; overflow: visible; color: white;
+    &:hover { background: transparent; border-color: @button-color; color: @button-text-color; }
+    &:active { background: darken(@button-hover-bg, 15%); border-color: darken(@button-color, 15%); color: @button-text-color; }
+    a { background: @button-color; border-color: @button-color; color: white; 
+      &:hover { background: transparent; border-color: transparent; color: @button-color; }
+      &:active { background: transparent; border-color: darken(@button-color, 15%); transition: all, 50ms ease-in; color: white; }
+    }
+}
+
+// Mini Square Button Deluxe™
+.mini-button-deluxe (@button-color, @button-text-color, @button-hover-text-color, @button-bg, @button-hover-bg) {
+  width: 2.75em; height: 2.75em; position: relative; border-color: @button-color; overflow: visible; color: @button-color;
+    &:hover { background: @button-hover-bg; border-color: @button-color; color: @button-hover-text-color; }
+    &:active { background: darken(@button-hover-bg, 15%); border-color: darken(@button-color, 15%); color: @button-text-color; }
+    a { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: @button-bg; border-color: @button-color; text-align: center; color: @button-text-color; 
+      &:hover { background: transparent; color: @button-hover-text-color; }
+      &:active { background: transparent; border-color: darken(@button-color, 15%); color: @white; transition: all 50ms, ease-in; }
+    }
+}
+
+// Page Header Page Based Styles
+.page-header-colors (@header-bg-color, @svg-recess-fill, @svg-creative-fill, @svg-ball-fill, @link-color, @active-link-color) {
+    header[role="banner"], #page-header {
+        background: @header-bg-color;
+    }
+    #recess-logo {
+        #recess {
+            * {
+                fill: @svg-recess-fill;
+            }
+        }
+        #creative {
+            * {
+                fill: @svg-creative-fill;
+            }
+        }
+        #ball {
+            * {
+                fill: @svg-ball-fill;
+            }
+        }
+    }
+    #main-nav {
+        .site-nav {
+            ul li a {
+                color: @link-color;
+                &::after {
+                    background: @link-color;
+                }
+                &.active, &.active-trail {
+                    color: @active-link-color;
+                    &::after {
+                        background: @active-link-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Home Page Slide Color Mixin - Changes color of text, pagination buttons & border-bottom
+.latest-slide-color (@slide-color, @slide-text-color) {
+	.latest-controls {
+		color: @slide-color;
+		.latest-pagination {
+			border-color: @slide-color; color: @slide-color;
+			&:hover {
+				background: @slide-color; color: @white;
+			}
+			&:active, &:focus, &:target {
+				background: darken(@slide-color, 15%); border-color: darken(@slide-color, 15%); color: @white;
+			}
+		}
+	}
+	.latest-slide {
+		border-bottom-color: darken(@slide-color, 15%);
+		.slide-info {
+			color: @slide-color;
+			p {
+				color: @slide-text-color;
+			}
+		}
+	}
+}
+
+// Tag Color Mixin
+.tag-colors (@icon-color, @tag-color, @tag-text-color) {
+    .tag {
+        .icon {
+            color: @icon-color;
+            &:hover {
+                color: darken(@tag-color, 25%);
+            }
+        }
+        .tooltip {
+            background: darken(@tag-color, 25%);
+            span {
+                &.title {
+                    color: @tag-text-color;
+                }
+                &.carrot {
+                    border-bottom-color: darken(@tag-color, 25%);
+                }
+            }
+        }
+    }
+}
+
+// Work Page Leaderboard/Tag Mixin
+.project-colors (@leaderboard-color, @header-color, @project-intro-header-color, @project-intro-copy-color, @project-intro-url-color, @project-intro-url-color-hover, @icon-color, @tag-color, @tag-text-color) {
+    .leaderboard {
+        background: @leaderboard-color; border-bottom-color: darken(@leaderboard-color, 15%);
+        header {
+            h1 {
+                color: @header-color;
+            }
+        }
+        .project-intro {
+            h3 {
+                color: @project-intro-header-color;
+            }
+            p {
+                color: @project-intro-copy-color;
+            }
+            .site-link {
+                color: @project-intro-url-color;
+                &:hover {
+                    color: darken(@project-intro-url-color-hover, 15%);
+                }
+            }
+        }
+        .tags {
+            .tag {
+                .icon {
+                    color: @icon-color;
+                    &:hover {
+                        color: darken(@tag-color, 25%);
+                    }
+                }
+                .tooltip {
+                    background: darken(@tag-color, 25%);
+                    span {
+                        &.title {
+                            color: @tag-text-color;
+                        }
+                        &.carrot {
+                            border-bottom-color: darken(@tag-color, 25%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .site-link {
+        color: @leaderboard-color;
+        &:hover {
+            color: darken(@leaderboard-color, 15%);
+        }
+    }
+}
+
+.scuttlebutt-project-colors (@background-color, @button-border, @button-color, @button-hover-background, @button-link-color, @button-link-border, @button-link-background, @button-link-color-hover, @button-link-background-hover) {
+  background: @background-color;
+  .work-container {
+    .mini-button {
+        border-color: @button-border; color: @button-color;
+        &:hover {
+          background: @button-hover-background;
+        }
+        a {
+          color: @button-link-color; border-color: @button-link-border; background: @button-link-background;
+          &:hover {
+            color: @button-link-color-hover; background: @button-link-background-hover;
+          }
+        }
+    }
+  }
+}
+
+// Case Study Color Mixin
+.case-study-colors (@leaderboard-color, @the-challenge-color, @header-3-color, @checklist-check-color, @metric-hover-color, @share-section-color) {
+    .leaderboard {
+        border-bottom-color: darken(@leaderboard-color, 15%);
+    }
+    .the-challenge {
+        background-color: @the-challenge-color;
+    }
+    h3 {
+      color: @header-3-color;
+    }
+    .the-results {
+      .check-list {
+        ul {
+          li {
+            &:before {
+              color: @checklist-check-color;
+            }
+          }
+        }
+      }
+      .metrics {
+        .metric {
+          &:hover {
+            background-color: @metric-hover-color;
+          }
+        }
+      }
+    }
+    .share-section {
+      h4 {
+        color: @share-section-color;
+      }
+      .mini-button.recess {
+        border-color: @share-section-color; color: @share-section-color;
+        &:hover {
+          background: @share-section-color; border-color: @share-section-color;
+        }
+        a {
+          border-color: @share-section-color; color: @share-section-color;
+          &:hover {
+            color: @white;
+          }
+        }
+      }
+      .button.recess {
+        border-color: @share-section-color; color: @share-section-color;
+        &:hover {
+          background: @share-section-color; border-color: @share-section-color;
+        }
+        a {
+          border-color: @share-section-color; color: @share-section-color;
+          &:hover {
+            color: @white;
+          }
+        }
+      }
+    }
+}
+

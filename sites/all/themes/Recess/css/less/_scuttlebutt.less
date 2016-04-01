@@ -1,0 +1,341 @@
+.scuttlebutt {
+	background: @white url('@{image-path}/step-pattern.png') repeat; /*.opacity(0);*/
+	@media (min-width: @small-screen) {
+		margin-top: @small-header-height;
+	}
+	@media (min-width: @medium-screen) {
+		margin-top: 6.45em;
+	}
+	article {
+		overflow: hidden;
+		.icon-header { 
+			position: relative;
+            img {
+                display: block; margin: 0 auto; text-align: center;
+            }
+            &:before {
+                content: ""; border-top: 1px solid @white; display: block; position: absolute; left: 0; top: .5em; width: 40%;
+            }
+            &:after {
+                content: ""; border-top: 1px solid @white; display: block; position: absolute; right: 0; top: .5em; width: 40%;
+            }
+        }
+        .description {
+        	.batman-bold;
+        }
+		// Shared Twitter & Facebook Styles
+		&.twitter, &.facebook {
+			@media (min-width: @small-screen) {
+				width: 100%; padding: @small-butt; border-top: 1px solid; border-bottom: 1px solid; color: @white; text-align: center; .transition(all 250ms ease-in-out);
+			}
+			@media (min-width: @small-med-screen) {
+				width: 50%; border: 1px solid;
+			}
+			@media (min-width: @medium-screen) {
+				width: 33.333%; padding: @medium-butt;
+			}
+			.handle {
+				font-size: 1em; .batman-medium; margin: 1em 0 0; text-align: left;
+				@media (min-width: @small-screen) {
+					 padding: 0 0; 
+				}
+				@media (min-width: @medium-screen) {
+					
+				}
+				a {
+					margin: 0 0; padding: 0 0; font-size: inherit; color: @white; text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			.tweet, .post {
+				.batman-light; font-size: 1em; line-height: 140%; text-align: left; margin: .25em 0 1em;
+				@media (min-width: @small-screen) {
+					
+				}
+				@media (min-width: @small-med-screen) {
+					 
+				}
+				@media (min-width: @medium-screen) {
+					
+				}
+				@media (min-width: @med-large-screen) {
+					
+				}
+				a {
+					@media (min-width: @small-screen) {
+						display: inline; padding: 0; font-size: inherit; color: @white; text-decoration: none; text-align: center;
+					}
+					@media (min-width: @medium-screen) {
+						text-align: center;
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			.description {
+				@media (min-width: @small-screen) {
+					width: 100%; float: left; text-transform: uppercase; text-align: center;
+				}
+			}
+		}
+
+		// Twitter
+		&.twitter {
+			background: @twitter-blue; /*border-color: darken(@twitter-blue, 15%);*/ border-color: @white;
+			.twitter-container {
+				display: block; position: relative; font-family:'batman', sans-serif;
+			}
+			&:hover {
+				background: darken(@twitter-blue, 15%);
+			}
+		}
+
+		// Facebook
+		&.facebook {
+			background: @facebook-blue; /*border-color: darken(@facebook-blue, 15%);*/ border-color: @white;
+			.facebook-container {
+				display: block; position: relative; font-family:'batman', sans-serif;
+			}
+			.post {
+				img {
+					margin: .5em auto 0; display: block;
+				}
+			}
+			&:hover {
+				background: darken(@facebook-blue, 15%);
+			}
+			.icon-header { 
+	            &:before, &:after {
+	                top: .75em;
+	            }
+	        }
+		}
+
+		// Instagram
+		&.instagram {
+			background: @white; font-family:'batman', sans-serif; border: 1px solid @white;
+			@media (min-width: @small-screen) {
+				width: 100%;
+			}
+			@media (min-width: @small-med-screen) {
+				width: 50%;
+			}
+			@media (min-width: @medium-screen) {
+				width: 33.333%;
+			}
+			a {
+				display: block; width: 100%; float: left; overflow: hidden;
+				img {
+					display: block; width: 100%; float: left; .transition(all 7500ms ease-in-out);
+				}
+				.description {
+					display: none;
+				}
+				&:hover {
+					img {
+						.transform(scale(1.25, 1.25)); position: relative;
+					}
+				}
+			}
+		}
+
+		// PR
+		&.pr, &.award, &.general {
+			background: @text-grey; color: @white; .batman; border: 1px solid #000; border-color: @white;
+			@media (min-width: @small-screen) {
+				width: 100%; padding: @small-butt;
+			}
+			@media (min-width: @small-med-screen) {
+				width: 50%;
+			}
+			@media (min-width: @medium-screen) {
+				width: 33.333%; padding: @medium-butt;
+			}
+			.pr-container, .award-container,  .general-container {
+				display: block; position: relative;
+				h3 {
+					font-size: 1.5em; .batman-light; margin: 1em 0 .25em;
+				}
+				p {
+					margin-bottom: 2em;
+				}
+				.description {
+					text-transform: uppercase; width: 100%; text-align: center;
+				}
+				.button.reverse-recess {
+					border-color: @white;
+					a {
+						border-color: @white; background: @text-grey; color: @white;
+					}
+					&:hover {
+						background: @white; color: @text-grey;
+						a {
+							background: @white; color: @text-grey;
+						}
+					}
+				}
+			}
+		}
+		&.final-item {
+			background: @recess-red; color: @white; .batman; border: 1px solid #000; border-color: @white;
+			@media (min-width: @small-screen) {
+				width: 100%; padding: @small-butt;
+			}
+			@media (min-width: @small-med-screen) {
+				width: 50%;
+			}
+			@media (min-width: @medium-screen) {
+				width: 33.333%; padding: @medium-butt;
+			}
+			.item-container {
+				display: block; position: relative;
+				.item-content {
+					padding-top: 1.5em;
+				}
+				h3 {
+					font-size: 1.5em; .batman-light; margin: 1em 0 .25em;
+				}
+				p {
+					margin-bottom: 1em;
+					&.links {
+						margin-bottom: 0; font-size: 1.7em; text-align: center;
+						a {
+							margin: 0 .1em; .opacity(.6); .transition(all 250ms ease-in-out);
+							&:hover {
+								.opacity(1);
+							}
+						}
+					}
+				}
+				.description {
+					text-transform: uppercase; width: 100%; text-align: center;
+				}
+			}
+		}
+
+		// Case Study
+		&.case-study {
+			@media (min-width: @small-screen) {
+				width: 100%;
+			}
+			@media (min-width: @medium-screen) {
+				width: 33.333%;
+			}
+			background: @white url('@{image-path}/step-pattern.png') repeat; color: @white; .batman; cursor: pointer;
+			.case-study-img {
+				width: 100%; position: relative; float: left; visibility: hidden;
+			}
+			.case-study-container {
+				.opacity(0); .transition(all 450ms ease-in-out); padding: 3em 2em; display: block; position: absolute; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.35);
+				.label {
+					font-size: 1.5em; .batman-light; color: @white; text-transform: uppercase;
+				}
+				h2 {
+					font-size: 2em; .batman-bold; text-transform: none;
+				}
+				.case-study-content {
+					position: absolute; bottom: 1em;
+					p {
+						color: @dark-grey-1; .batman-medium; text-transform: uppercase; display: block; text-align: center;
+					}
+				}
+				.mini-button {
+					position: absolute; top: 1em; right: 1em; 
+					a {
+						line-height: 200%;
+					}
+				}
+			}
+			&:hover {
+				.case-study-container {
+					.opacity(1);
+				}
+			}
+		}
+
+		// Generic Work
+		&.work {
+			background: @white url('@{image-path}/step-pattern.png') repeat; color: @white; font-family:'batman', sans-serif;
+			@media (min-width: @small-screen) {
+				width: 100%; padding: @small-butt;
+			}
+			@media (min-width: @small-med-screen) {
+				width: 50%;
+			}
+			@media (min-width: @medium-screen) {
+				width: 33.333%; padding: @medium-butt;
+			}
+			.work-container {
+				display: block; width: 100%; float: left; position: relative;
+				h3 {
+					font-size: 2.3em; padding: 0 1em; font-family: 'batman-light', sans-serif; text-align: center; color: @recess-red; text-transform: uppercase;
+				}
+				.description {
+					display: block; width: 100%; float: left; position: absolute; bottom: 1em; left: 0; text-transform: uppercase; width: 100%; text-align: center; color: @white;
+				}
+				.work-content {
+					img {
+						display: block; margin: 0 auto 1.5em;
+					}
+					p {
+						color: @white; font-family: 'batman-medium', sans-serif; text-transform: uppercase; display: block; text-align: center;
+					}
+					a {
+						color: @white; text-transform: uppercase; text-align: center; display: block; text-decoration: none; font-size: .8em;
+					}
+				}
+				.mini-button {
+					.scuttlebutton;
+					a {
+						line-height: 200%;
+					}
+				}
+			}
+			// Project Specific Styles - Define Button Colors In _typography.less
+			&.hello-cle {
+				.scuttlebutt-project-colors (@hello-orange, @white, @white, @white, @white, @white, @hello-orange, @hello-orange, @white);
+			}
+
+		}
+	}
+}
+
+.load-more {
+	padding: 3em; background: @white url('@{image-path}/step-pattern.png') repeat;
+	.button {
+		max-width: 500px; display: block; margin: 0 auto;
+	}
+}
+
+// NEWS ARTICLE/BASIC TEMPLATE
+.node-type-article {
+	article[role="main"] {
+		background: @white url('@{image-path}/step-pattern.png') repeat;
+		@media (min-width: @small-screen) {
+			padding-bottom: 1.25em;
+		}
+	}
+	.leaderboard {
+		margin-bottom: 2em; border-bottom: 4px solid darken(@recess-red, 15%);
+		header {
+			position: absolute; top: 38%; width: 100%; text-align: center; color: @white; text-shadow: 2px 2px 0px #000;
+			h1 {
+				text-transform: uppercase;
+			}
+			h2 {
+				.batman-medium; text-transform: none;
+			}
+		}
+	}
+	&.no-leaderboard {
+		section[role="main"] {
+			padding-top: 10em;
+		}
+	}
+}
+@media (max-width: 767px) { 
+   .page-node-5 article[role="main"] {top: 0;}
+}

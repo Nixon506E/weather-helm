@@ -1,0 +1,401 @@
+#main-wrapper {
+	
+	h1 {
+		padding: 2.1rem 0 1.68rem 0;
+		margin: 0;
+	}
+   
+    .content-wrapper {
+	    max-width: 1024px !important;
+		margin: 0 auto !important;
+		width: 100%;
+		height: auto;
+		padding-top: 20px;
+		z-index: 10;
+		position: relative;
+    }
+    
+    .col a picture img {
+	    //cursor: help;
+    }
+    
+    .card {
+	    .card-content {
+		      position: relative;
+			  z-index: 10;
+			  background: white;
+	    }
+    }
+    
+    .overlay {
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    z-index: 0;
+	    
+	    &.white {
+		    background-color: rgba(255,255,255,0.5) !important;
+	    }
+    }
+    
+    .parallax {
+	    left: -2px !important;
+	    right: -2px !important;
+	    
+    	img {
+		    display: block;
+		    opacity: 0;
+		    transition: opacity 1s linear;
+			-moz-transition: opacity 1s linear;
+			-webkit-transition: opacity 1s linear;
+    	}
+    }
+    
+    .full { 
+		position: relative;
+		width: 100vw;
+		text-align: center;
+		
+		.parallax-container {
+			height: auto;
+			
+			.parallax img {
+				bottom: 25px;
+				width: 100vw;
+				min-height: auto;
+			}
+		}
+	}
+    
+    .float {	
+	    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		z-index: 99;
+		position: relative;
+	    
+	    &.float-blue {
+		    background-color: @primaryColor;
+	    }
+    }
+    
+    .circular {
+		border-radius: 200px;
+		-webkit-border-radius: 200px;
+		-moz-border-radius: 200px;
+    }
+    
+    .row .col {
+	    padding: 0.75rem;
+    }
+    
+    .card .card-content {
+	    padding-top: 15px;
+    }
+    
+    .profile-img {
+	    width: 400px;
+	    height: auto;
+	    display: block;
+	    margin: 0 auto;
+    }
+    
+    /*.card-title {
+	    margin: -20px;
+		margin-bottom: 15px;
+		padding: 20px;
+		padding-bottom: 0;
+		padding-top: 15px;
+		background-color: @darkPrimaryColor;
+    }*/
+    
+    .card-icon {
+	    background-color: @primaryColor;
+		border-radius: 16px;
+		-webkit-border-radius: 16px;
+		-moz-border-radius: 16px;
+		line-height: 32px;
+		height: 32px;
+		width: 32px;
+		margin-top: 5px;
+		color: white;
+		font-size: 20px;
+		text-align: center;
+		-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 0 0 rgba(0, 0, 0, 0.08);
+		-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 0 0 rgba(0, 0, 0, 0.08);
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 0 0 rgba(0, 0, 0, 0.08);
+    }
+    
+    .vert-center {
+	    position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+    }
+    
+    .vert-center-flex {
+	    display: flex;
+		flex-direction: column;
+		justify-content: center;
+    }
+    
+    .icon-table {
+	    display: table;
+	    width: 100%;
+	    z-index: 10;
+		position: relative;
+	    
+	    a {
+		    display: table-cell;
+		    width: 1%;
+		    
+		    &:first-of-type {
+			    padding-left: 0;
+		    }
+		    
+		    &:last-of-type {
+			    padding-right: 0;
+		    }
+		    
+		    img {
+			    width: 80%;
+			    margin: 10%;
+				transition: all .15s ease-in-out;
+				-moz-transition: all .15s ease-in-out;
+				-webkit-transition: all .15s ease-in-out;
+				
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				
+				-webkit-perspective: 1000;
+				-moz-perspective: 1000;
+				-ms-perspective: 1000;
+				perspective: 1000;
+				
+				-webkit-transition:all .3s ease-out;
+				-moz-transition:all .3s ease-out;
+				-ms-transition:all .3s ease-out;
+				-o-transition:all .3s ease-out;
+				transition:all .3s ease-out;
+			    
+			    &:hover {
+					-webkit-filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.4));
+					filter: url(#drop-shadow);
+					-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=10, Color='#444')";
+					filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=10, Color='#444')";
+					-webkit-backface-visibility: hidden;
+					backface-visibility: hidden;
+					-moz-font-smoothing: antialiased;
+					-webkit-font-smoothing: antialiased;
+					-webkit-transform:translate3d(0px,-10px,0);
+					-moz-transform:translate3d(0px,-10px,0);
+					-ms-transform:translate3d(0px,-10px,0);
+					-o-transform:translate3d(0px,-10px,0);
+					transform:translate3d(0px,-10px,0);
+			    }
+
+  //<svg height="0" xmlns="http://www.w3.org/2000/svg">
+  //  <filter id="drop-shadow">
+  //      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+  //      <feOffset dx="0" dy="10" result="offsetblur"/>
+  //      <feFlood flood-color="rgba(0,0,0,0.5)"/>
+  //      <feComposite in2="offsetblur" operator="in"/>
+  //      <feMerge>
+  //          <feMergeNode/>
+  //          <feMergeNode in="SourceGraphic"/>
+  //      </feMerge>
+  //  </filter>
+  //</svg>
+			    
+		    }
+	    }
+    }
+    
+    .bkg-head {
+	    position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-image: url("/sites/default/files/bkg-head.jpg");
+		background-size: cover;
+		background-color: #607D8B;
+		height: 575px;
+		z-index: -1;
+		-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 0 0 rgba(0, 0, 0, 0.08);
+		-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 0 0 rgba(0, 0, 0, 0.08);
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 0 0 rgba(0, 0, 0, 0.08);
+    }
+    
+    .view-feed .view-content {
+	    padding: 1rem 1%;
+	    max-width: 1024px;
+	    margin: 0 auto;
+	    
+	    .grid-sizer {
+		    width: 47%;
+		    margin: 0.5rem 1.5%;
+	    }
+	    
+	    .views-row.card {
+		    width: 46%;
+		    //padding: 1rem;
+		    margin: 0.5rem 1.5%;
+		    
+		    &.two-column {
+			    //width: 95%;
+			    //width: 46%;
+		    }
+		    
+		    &.three-column {
+			    //width: 95%;
+			    //width: 46%;
+		    }
+		    
+		    .views-field.views-field-title {
+			    .Sports a {
+				    color: @categoryBlue;
+			    }
+			    
+			    .Technology a {
+				    color: @categoryBrown;
+			    }
+			    
+			    .Apple a {
+				    color: @categoryRed;
+			    }
+			    
+			    .Development a {
+				    color: @categoryBlack;
+			    }
+			    
+			    .Cleveland a {
+				    color: @categoryGrey;
+			    }
+			    
+			    .Camping a {
+				    color: @categoryGreen;
+			    }
+			    
+			    .Entertainment a {
+				    color: @categoryPurple;
+			    }
+			    
+			    .Games a {
+				    color: @categoryOrange;
+			    }
+			    
+			    .Sailing a {
+				    color: @categoryTeal;
+			    }
+			    
+			    a {
+				    color: @categoryYellow;
+			    }
+		    }
+		    
+		    .views-field.views-field-field-image {
+			    img {
+				    width: 100%;
+			    }
+		    }
+		    
+		    .views-field.views-field-timestamp,
+		    .views-field.views-field-category {
+			    display: inline-block;
+			    color: @secondaryTextColor;
+			    
+			    em a {
+				    color: @secondaryTextColor !important;
+			    }
+		    }
+		    
+		    .views-field.views-field-timestamp:after {
+			    content: ' - ';
+		    }
+		    
+		    .views-field.views-field-field-feed-item-description {
+			    .field-content > p:first-of-type {
+				    margin-top: 0; 
+			    }
+			    
+			    .field-content > p:last-of-type {
+				    margin-bottom: 0; 
+			    }
+		    }
+	    }
+    }
+    
+    .view-filters { display: none !important; }
+    
+    #fourohfour {
+	    
+    }
+    
+    @media only screen and (min-width : 1024px) {
+	    .view-feed .view-content {
+		    padding: 1rem 0;
+		    
+		    .grid-sizer {
+			    width: 330px;
+			    margin: 0.5rem 5px;
+		    }
+		    
+		    .views-row.card {
+			    width: 330px;
+			    margin: 0.5rem 5px;
+			    
+			    &.two-column {
+				    //width: 670px;
+			    }
+			    
+			    &.three-column {
+				    //width: 1010px;
+			    }
+		    }
+	    }
+	}
+	
+	@media only screen and (max-width : 655px) {
+	    .view-feed .view-content {
+		    padding: 1rem 0;
+		    
+		    .grid-sizer {
+			    width: 96%;
+			    margin: 0.5rem 2%;
+		    }
+		    
+		    .views-row.card {
+			    width: 96%;
+			    margin: 0.5rem 2%;
+			    
+			    &.two-column {
+				    //width: 96%;
+			    }
+			    
+			    &.three-column {
+				    //width: 96%;
+			    }
+		    }
+	    }
+	    
+	    #fourohfour {
+	    	td { 
+		    	float: left !important;
+		    	width: 100% !important;
+		    	text-align: center !important;
+		    
+				span {
+					//font-size: 50vw !important;
+				}
+		    	
+		    	img {
+			    	padding-bottom: 5em !important;
+			    	width: 80% !important;
+		    	}
+		    }
+    	}
+	}
+}

@@ -1,0 +1,80 @@
+/*****************************************************************
+ CHAZZ THEME | "MOBILE FIRST" RESPONSIVE GRID SYSTEM
+*****************************************************************/
+
+/** SMALL SCREEN **/
+@media only screen and (min-width:300px) {
+	
+	/*Content Grid*/
+	.wrap { width:100%; }
+	.container { width:100%; }
+
+	.col, .node { margin:0 0 0 0; text-align:inherit; float:left; }
+	.one-col, .two-col, .three-col, .four-col, .five-col, .six-col, .seven-col, .eight-col, .nine-col, .ten-col, .eleven-col, .twelve-col, .node { width:100%; text-align:inherit; float:left; }
+
+	/*Shortcodes Grid*/
+	.short-col, .short-col:first-child { padding:0 0 0 0; float:left; text-align: inherit; }
+	.one-third, .one-third-left, .one-third-right, .one-third-center, .two-thirds, .two-thirds-left, .two-thirds-right, .two-thirds-center, .one-fourth, .one-fourth-left, .one-fourth-right, .one-fourth-center, .one-half, .one-half-left, .one-half-right, .one-half-center, .three-quarters, .three-quarters-left, .three-quarters-right, .three-quarters-center, .full-width { width:100%; margin:0 0 0 0; }
+}
+
+@media only screen and (min-width:500px) {
+	/*Content Grid*/
+	.container { width:100%; }
+}
+
+/** MEDIUM SCREEN **/
+@media only screen and (min-width:715px) {
+
+	/*Shortcodes Grid*/
+	.short-col { float:left; text-align:inherit; padding:0 0 0 1em; }
+	.short-col:first-child { padding:0 0 0 0; }
+
+	.one-third { width:33.33%; }
+	.one-third-left { width:33.33%; margin:0 66.66% 0 0; padding:0 0 0 0; }
+	.one-third-right { width:33.33%; margin:0 0 0 66.66%; padding:0 0 0 0; }
+	.one-third-center { width:33.33%; margin:0 33.33%; padding:0 0 0 0; }
+	.two-thirds { width:66.66%; }
+	.two-thirds-left { width:66.66%; margin:0 33.33% 0 0; padding:0 0 0 0; }
+	.two-thirds-right { width:66.66%; margin:0 0 0 33.33%; padding:0 0 0 0; }
+	.two-thirds-center { width:66.66%; margin:0 16.665%; padding: 0 0 0 0; }
+	.one-fourth { width:25%; }
+	.one-fourth-left { width:25%; margin:0 75% 0 0; padding:0 0 0 0; }
+	.one-fourth-right { width:25%; margin:0 0 0 75%; padding:0 0 0 0; }
+	.one-fourth-center { width:25%; margin:0 37.5%; padding:0 0 0 0;}
+	.one-half { width:50%; }
+	.one-half-left { width:50%; margin:0 50% 0 0; padding:0 0 0 0; }
+	.one-half-right { width:50%; margin:0 0 0 50%; padding:0 0 0 0; }
+	.one-half-center { width:50%; margin:0 25%; padding:0 0 0 0; }
+	.three-quarters { width:75%; }
+	.three-quarters-left { width:75%; margin:0 25% 0 0; padding:0 0 0 0; }
+	.three-quarters-right { width:75%; margin:0 0 0 25%; padding:0 0 0 0; }
+	.three-quarters-center { width:75%; margin:0 12.5%; padding:0 0 0 0; }
+	.full-width { width:100%; padding: 0 0 0 0; }
+
+}
+
+/** LARGE SCREEN **/
+@media only screen and (min-width:768px) {
+	
+	/*Content Grid*/
+	.container { min-width: 300px; width:100%; height:auto; padding: 0; margin:0 auto; position: relative; overflow:hidden; text-align:inherit; }
+	.container .col .short-col:first-child { margin: 0 0 0 0; }
+
+	.col, .node { margin:0; text-align:inherit; float:left;  }
+	.one-col { width:5%; }
+	.two-col { width:13.333%; }
+	.three-col { width:21.66%; }
+	.four-col { width:30%; }
+	.five-col { width:38.33%; }
+	.six-col { width:46.66%; }
+	.seven-col { width:55%;}
+	.eight-col { width:63.33%; }
+	.nine-col { width:71.66%; }
+	.ten-col { width:80%; }
+	.eleven-col { width:88.33%; }
+	.twelve-col { width:96.65%; }
+
+	/*Shortcodes Grid*/
+	.short-col { float:left; text-align:inherit; padding:0 0 0 1.5em; }
+
+}

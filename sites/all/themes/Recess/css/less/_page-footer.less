@@ -1,0 +1,300 @@
+footer[role="contentinfo"], #page-footer {
+	width: 100%; margin: 0 auto 0; padding: 0 0; float: left; border-top: 1px solid @grey;
+	> div {
+		width: 100%; margin: 0 auto; float: left; position: relative;
+		@media (min-width: @small-med-screen) {
+			padding-right: 3em; padding-left: 3em;
+		}
+	}
+	@media (min-width: @small-screen) {
+		position: relative; top: 4em;
+	}
+	@media (min-width: @medium-screen) { 
+		position: static;
+	}
+}
+
+// Ankle
+.ankle {
+	position: relative; background: @white url('@{image-path}/step-pattern.png') repeat;
+	@media (min-width: @small-screen) {
+		padding-top: 2em; padding-bottom: 1.5em; 
+	}
+	@media (min-width: @medium-screen) {
+		padding-top: 2em; padding-bottom: 2em; 
+	}
+	.contact-us {
+		@media (min-width: @small-screen) {
+			width: 100%; margin: 0 auto; float: left;
+		}
+		@media (min-width: @med-large-screen) {
+			width: 75%;
+		}
+		> section {
+			@media (min-width: @small-screen) {
+				width: 90%; margin: 0 5% 1.5em 5%; float: left; text-align: center;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			@media (min-width: @small-med-screen) {
+				width: 33.333%; margin: 0 0 0 0;
+			}
+			.icon {
+				@media (min-width: @small-screen) {
+					display: inline-block; margin: 0 0 .25em 0; clear: both; font-size: 2.5em; color: @recess-red;
+				}
+				@media (min-width: @small-med-screen) {
+					margin: 0 0 .25em 0;
+				}
+				@media (min-width: @medium-screen) {
+					margin: 0 .25em 0 0; float: left; clear: none;
+				}
+				@media (min-width: @large-screen) {
+					margin: 0 .5em 0 0;
+				}
+			}
+		}
+		.address {
+			p {
+				@media (min-width: @small-screen) {
+					display: inline-block; width: 100%; margin-bottom: 0; float: left; line-height: 112.5%; text-align: center;
+				}
+				@media (min-width: @medium-screen) {
+					width: auto; text-align: left; font-size: .9em;
+				}
+				@media (min-width: @large-screen) {
+					font-size: 1em;
+				}
+			}
+			a { 
+				color: inherit; 
+			}
+			.icon {
+				@media (min-width: @medium-screen) {
+					position: relative; top: .35em;
+				}
+			}
+		}
+		.call-us {
+			a {
+				@media (min-width: @small-screen) {
+					display: inline-block; width: 100%; float: left; .batman-light; font-size: 1.25em; color: @text-grey; text-decoration: none;
+				}
+				@media (min-width: @small-med-screen) {
+					position: relative; top: 1em;
+				}
+				@media (min-width: @medium-screen) {
+					width: auto; float: none; position: relative; top: .583em; text-align: center; cursor: text;
+				}
+				@media (min-width: @large-screen) {
+					font-size: 1.5em;
+				}
+				&.phone {
+					.icon {
+						@media (min-width: @small-screen) {
+							font-size: 200%;
+						}
+						@media (min-width: @small-med-screen) {
+							position: relative; top: -.35em;
+						}
+						@media (min-width: @medium-screen) {
+							top: 0;
+						}
+						@media (min-width: @large-screen) {
+							font-size: 166.66%;
+						}
+					}
+				}
+			}
+			a.call-recess {
+				@media (min-width: @small-screen) {
+					font-size: .9em; font-family: 'Gotham 4r','Gotham A','Gotham B'; font-weight:400
+				}
+			}
+		}
+		.email-us {
+			p {
+				@media (min-width: @small-screen) {
+					margin-bottom: 0;
+				}
+				@media (min-width: @medium-screen) {
+					float: none; position: relative; top: .5em;
+				}
+			}
+			a {
+				display: inline-block; font-style: normal; color: @text-grey; text-decoration: none;
+				.icon {
+					color: @recess-red;
+					@media (min-width: @medium-screen) {
+						top: -.125em; 
+					}
+				}
+				&:hover {
+					color: @recess-red;
+				}
+				.text {
+					@media (min-width: @small-screen) {
+						display: inline-block; width: 100%; margin: 0 auto; float: left; position: relative; text-align: center;
+					}
+					@media (min-width: @medium-screen) {
+						width: auto; top: .375em;
+					}
+				}
+			}
+		}
+	}
+	.tuneage {
+		@media (min-width: @small-screen) {
+			display: none; float: right;
+		}
+		@media (min-width: @med-large-screen) {
+			display: block; width: 25%; margin: 0 auto; position: relative;
+		}
+		.wave-container {
+			@media (min-width: @small-screen) {
+				display: none;
+			}
+			@media (min-width: @med-large-screen) {
+				display: block; width: 30%; height: 3.75em; margin: 0 0; padding: 0 0 .125em 0; float: left; overflow: hidden;
+			}
+			span {
+				display: block; margin: .33em auto 0 auto; padding: 0 0; float: left; font-size: 375%; color: @recess-red; opacity: .65; cursor: default; .transition(opacity 150ms ease-in-out);
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+		.now-playing {
+			margin: 0 auto; padding: 0 0 0 1.25em; float: left; text-align: left;
+			@media (min-width: @med-large-screen) {
+				width: 70%;
+			}
+			header {
+				p {
+					margin-bottom: .125em; .batman-medium; text-transform: uppercase;
+				}
+			}
+			.track {
+				p {
+					margin-bottom: 0; .batman-light; line-height: 125%;
+					strong {
+						.batman-bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Feet
+.feet {
+	background: @dark-grey-2;
+	@media (min-width: @small-med-screen) {
+		padding-top: 2em; padding-bottom: 1.65em;
+	}
+	nav {
+		width: 100%; float: left; text-align: left;
+		ul {
+			display: block; text-align: inherit;
+			li {
+				display: inline-block; margin: 0 0; padding: 0 0 0 0;
+				@media (min-width: @small-screen) {
+					width: 100%;
+				}
+				@media (min-width: @small-med-screen) {
+					width: auto;
+				}
+				a {
+					display: block; width: 100%; float: left; text-decoration: none;
+				}
+			}
+		}
+		.sitemap {
+			@media (min-width: @small-screen) {
+				width: 100%; padding: .61em 0; float: left; text-align: center;
+			}
+			@media (min-width: @small-med-screen) {
+				padding-top: 0 0;
+			}
+			@media (min-width: @medium-screen) {
+				width: auto; text-align: left;
+			}
+			a {
+				@media (min-width: @small-screen) {
+					padding: .75em 0; .batman-bold; font-size: .8125em; letter-spacing: .01em; text-transform: uppercase; text-align: center; color: @white; .transition(color 150ms ease-in);
+				}
+				@media (min-width: @small-med-screen) {
+					margin: 0 .5em 0 0; padding: 0 0; text-align: left;
+				}
+				&:hover {
+					color: @dark-grey-1;
+				}
+			}
+			.expanded {
+				.menu {
+					display: none;
+				}
+			}
+		}
+		.social-nav {
+			@media (min-width: @small-screen) {
+				width: 100%; padding: .61em 0 1.35em 0; float: left; text-align: center;
+			}
+			@media (min-width: @small-med-screen) {
+				padding: 0 0; position: relative; top: .5em;
+			}
+			@media (min-width: @medium-screen) {
+				width: auto; float: right; text-align: left;
+			}
+			a {
+				@media (min-width: @small-screen) {
+					margin: 0 .4em; font-size: 1.5em; color: @dark-grey-1; .transition(color 150ms ease-in);
+					&:last-child {
+						margin: 0 .4em;
+					}
+				}
+				@media (min-width: @small-med-screen) {
+					margin: 0 0 0 .25em;
+					&.linkedin {
+						margin: 0 .1em 0 .5em;
+					}
+				}
+				&:hover {
+					color: @white;
+				}
+			}
+		}
+	}
+}
+
+// Toes
+.toes {
+	background: @dark-grey-1; color: @grey-2;
+	ul {
+		display: block; width: 90%; margin: 0 5%; padding: .25em 0 .4em 0; float: left; text-align: center;
+		li {
+			display: inline-block; margin: 0 0; .batman-bold; font-size: .6875em; letter-spacing: .01em; text-align: center; color: @grey-2;
+			@media (min-width: @small-screen) {
+				width: 100%; margin-bottom: .25em;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			@media (min-width: @small-med-screen) {
+				width: auto; margin-bottom: 0;
+			}
+			span {
+				display: inline-block; margin: 0 .25em; font-size: 75%; color: @heart-red; cursor: default;
+			}
+			&[aria-hidden="true"] {
+				@media (min-width: @small-screen) {
+					display: none;
+				}
+				@media (min-width: @small-med-screen) {
+					display: inline-block; margin: 0 .25em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+
+
+.wave-container.active { position: relative; z-index: 9999; }
+.wave-container span { visibility: hidden; }
+
+#spectrum { position: absolute; display: block; top: -21px; width: 33%; overflow: hidden; height: 100px; }
+#spectrum canvas { width: 100%!important; height: 50px!important; }
+#spectrum #canvas-bot { -webkit-transform: scaleY(-1); position: absolute; left: 0px; top: 50px; }
+
+#can-listen { float: left; width: 100%; height: 68px; display: none; position: relative; top: -68px; }
+#can-listen.hover.play { background: url('@{image-path}/icon_play_btn.png') no-repeat center center; background-size: 50%; }
+#can-listen.hover.start { background: url('@{image-path}/icon_play_btn.png') no-repeat center center; background-size: 50%; }
+#can-listen.hover.pause { background: url('@{image-path}/icon_pause_btn.png') no-repeat center center; background-size: 50%; }
+#can-listen p { float: left; width: 100%; text-align: center; color: #FFF; font-size: .8em; padding-top: 1.75em; } 
+#can-listen.hover p { display: none; }
+
+.wave-container.active #can-listen { top:0px; }

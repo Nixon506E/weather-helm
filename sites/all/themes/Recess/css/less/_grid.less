@@ -1,0 +1,134 @@
+.container { 
+	max-width: 80em; min-width: 18.75em; height: auto; margin: 0 auto; position: relative; overflow: hidden; text-align: inherit;
+	@media (min-width: @small-screen) and (max-width: @small-med-screen) {
+		width: 90%;
+	}
+	@media (min-width: @small-med-screen) {
+		width: auto; padding: 0 6.25em;
+	}
+	@media (min-width: 100em) {
+		max-width: 100em;
+	}
+}
+
+// Work as class names and mixins
+.col {
+	text-align: inherit; float: left;
+	@media (min-width: @small-screen) { margin:0 0; }
+	@media (min-width: @small-med-screen) { margin:0 1.95%; }
+	@media (min-width: @med-large-screen) { margin:0 1.66%; }	
+}
+
+.one-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width:12.76%; }
+	@media (min-width: @med-large-screen) { width:5%; }
+}
+
+.two-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width:12.76%; }
+	@media (min-width: @med-large-screen) { width:13.333%; }
+}
+
+.three-col {
+	@media (min-width: @small-screen) { /*width: 100%;*/ }
+	@media (min-width: @medium-screen) { width:46.09375%; }
+	@media (min-width: @med-large-screen) { width:21.66%; }
+}
+
+.four-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @small-med-screen) { width: 46.1%; }
+	@media (min-width: @medium-screen) { width:29.427%; }
+	@media (min-width: @med-large-screen) { width:30%; }
+}
+
+.five-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width:46.09375%; }
+	@media (min-width: @med-large-screen) { width:38.33%; }
+}
+
+.six-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @small-med-screen) { width: 96%; }
+	@media (min-width: @medium-screen) { width:46.09375%; }
+	@media (min-width: @med-large-screen) { width:46.66%; }
+}
+
+.seven-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width:46.09375%; }
+	@media (min-width: @med-large-screen) { width:55%; }
+}
+
+.eight-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width:62.76%; }
+	@media (min-width: @med-large-screen) { width:63.33%; }
+}
+
+.nine-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width: 96.09375%; }
+	@media (min-width: @med-large-screen) { width:71.66%; }
+}
+
+.ten-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width:96.09375%; }
+	@media (min-width: @med-large-screen) { width:80%; }
+}
+
+.eleven-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @medium-screen) { width:96.09375%; }
+	@media (min-width: @med-large-screen) { width:88.33%; }
+}
+
+.twelve-col {
+	@media (min-width: @small-screen) { width: 100%; }
+	@media (min-width: @small-med-screen) { width:96.1%; }
+	@media (min-width: @medium-screen) { width:96.09375%; }
+	@media (min-width: @med-large-screen) { width:96.66%; }
+}
+
+.one-half {
+	@media (min-width: @small-screen) {
+		width: 90%; margin: 0 5%; float: left;
+	}
+	@media (min-width: @small-med-screen) {
+		width: 75%; margin: 0 12.5%;
+	}
+	@media (min-width: @med-large-screen) {
+		width: 50%; margin: 0 0;
+	}
+}
+
+.full-width {
+	@media (min-width: @small-screen) {
+		width: 100%; margin: 0 0; float: left;
+	}
+}
+
+.left-side {
+	@media (min-width: @med-large-screen) {
+		padding-left: 6.25em;
+	}
+}
+
+.right-side {
+	@media (min-width: @med-large-screen) {
+		padding-right: 6.25em;
+	}
+}
+
+.centered { 
+	@media (min-width: @small-med-screen) { 
+		margin-right: auto!important; margin-left: auto!important; clear: both !important; float: none!important;
+		&::before, &::after {
+			content: ''; display: table; width: 100%; height: 0px; float: left; clear: both;
+		}
+	}
+}

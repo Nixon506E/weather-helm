@@ -1,0 +1,417 @@
+body {
+	@media (min-width: @small-screen) {
+		margin: 0 auto; font-size: 16px; .batman; line-height: 144%; color: @text-grey; background: @white;
+	}
+	@media (min-width: 100em) {
+		font-size: 18px; line-height: 150%;
+	}
+}
+body, html {
+	width: 100% !important;
+}
+
+// Misc.
+::-moz-selection {
+ 	background: @recess-red; color: @white;
+}
+::selection {
+	background: @recess-red; color: @white;
+}
+.hidden {
+	display: none;
+}
+
+// Animated In Items
+.animate-in  {
+	.opacity(0); margin-top: 300px;
+}
+.animate-in.active {
+	opacity: 1; 
+	margin-top: 0px;
+    -moz-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* FF4+ */
+    -o-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Opera 10.5+ */
+    -webkit-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Saf3.2+, Chrome */
+    -ms-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE10? */
+    transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+
+	-webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	-moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	-o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+}
+
+// Animated In Items
+.scuttlebutt .item {
+	.opacity(0);
+}
+.scuttlebutt .item.active {
+	opacity: 1; 
+	margin-top: 0px!important;
+    -moz-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* FF4+ */
+    -o-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Opera 10.5+ */
+    -webkit-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Saf3.2+, Chrome */
+    -ms-transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE10? */
+    transition: all 1400ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+
+	-webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	-moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	-o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+}
+
+
+// .touch.animate-in {
+// 	.opacity(1); margin-top: 0em;
+// }
+
+article[role="main"], #main-article {
+	//overflow-x: hidden !important;
+	@media (max-width: 767px) { 
+		position: relative; top: 4em;
+
+		.leaderboard {
+			margin-bottom: 0;
+		}
+	}
+}
+.page-node-5 {
+	article[role="main"] {
+		overflow-x: hidden;
+	}
+}
+
+// Leaderboard/Banner
+.leaderboard {
+	margin-bottom: 0em; border-bottom: 4px solid darken(@recess-red, 15%);
+	@media (min-width: @small-screen) {
+		width: 100%; /*margin: @small-header-height auto 0 auto; */ padding: 0 0; float: left; background: @light-grey; overflow: hidden;
+	}
+	@media (min-width: @medium-screen) {
+		min-height: 500px; /*margin: 0 auto; */ position: relative; top: 0;
+		&::after {
+			content:''; display: block; width: 100%; height: 0; float: left; clear: both;
+		}
+		img {
+			max-width: none; min-height: 100%;
+		}
+	}
+	img {
+		min-width: 100%; 
+	}
+	.leaderboard-carousel {
+		img {
+			min-width: 0; min-height: 0; height: auto; float: left;
+		}
+	}
+	header {
+		width: 100%; margin: 0 auto; padding: 0 0; position: absolute; top: 0; text-align: center; color: @white;
+		h1 {
+			text-shadow: 2px 2px 0px #000; font-size: 4em; line-height: 103%; text-transform: none;
+		}
+		h2 {
+			.batman-medium; text-transform: none;
+		}
+		p {
+
+		}
+	}
+	@media (max-width: @small-med-screen) { 
+		min-height: 0; height: auto !important; 
+		img {
+			float: left;
+		}
+	}
+}
+
+// Tagging System
+.tags {
+	@media (min-width: @small-screen) {
+		display: block; width: 100%; height: auto; margin: 0 auto; padding: 0 0; float: left; text-align: center;
+	}
+	@media (min-width: @medium-screen) {
+		width: auto; max-width: 50%; position: absolute; top: 5.75em; left: 1.75em;
+	}
+	@media (min-width: 55em) {
+		left: 2.875em;
+	}
+	.tag {
+		@media (min-width: @small-screen) {
+			display: inline-block; width: auto; height: auto; margin: 0 1.125em 0 0; padding: 0 0; position: relative; font-size: 100%; line-height: 100%; text-align: center; text-decoration: none;
+		}
+		@media (min-width: @small-med-screen) {
+			display: block; float: left;
+		}
+		.icon {
+			font-size: 175%; line-height: 100%; color: @white; .transition(all 150ms ease-in-out);
+		}
+		.tooltip {
+			@media (min-width: @small-screen) {
+				display: none;
+			}
+			@media (min-width: @small-med-screen) {
+				display: block; min-width: 8em; margin: 0 auto; padding: .25em .25em; position: absolute; top: 2.75em; left: -200%; background: @white; border-radius: 4px; text-align: center; .opacity(0); z-index: 100; .transition(all 150ms ease-in-out);
+			}
+			span {
+				margin: 0 auto; text-align: center;
+				&.title {
+					display: block; width: 100%; margin: 0 auto; padding: 0 0; float: left; position: absolute; top: .65em; left: 0; .batman; font-size: 81.25%; text-transform: uppercase; color: @text-grey;
+				}
+				&.carrot {
+					display: inline-block; width: 0; height: 0; border-right: .75em solid transparent; border-left: .75em solid transparent; border-bottom: 1.25em solid @white; position: relative; top: -.88em; z-index: -1;
+				}
+			}
+		}
+		&:hover {
+			.tooltip {
+				.opacity(1);
+			}
+		}
+	}
+	// Work Page Leaderboard/Tag Mixin
+	// Use '.project-colors' mixin on _work.less
+}
+
+// Flip Cards
+.flip-cards {
+	height: auto;
+    @media (min-width: @small-screen) {
+        margin: .5em auto 0 auto; float: left;
+    }
+    @media (min-width: @small-med-screen) {
+        margin: 2em auto; float: none;
+    }
+	.flip {
+		/*margin: 0 auto;*/ float: left; position: relative; -webkit-perspective: 800; -ms-perspective: 800; -moz-perspective: 800px; perspective: 800; /*.transition(all 300ms ease-in);*/
+		@media (min-width: @small-screen) {
+			width: 100%; height: auto;
+		}
+		@media (min-width: @small-med-screen) {
+			width: 50%; height: 13.75em;
+		}
+		@media (min-width: @medium-screen) {
+			width: 25%; height: 16.3125em;
+		}
+		&.flipped-parent {
+			border: none!important; z-index: 2; 
+		}
+		&.animate-in {
+			// margin-top: 100px;
+		}
+		.card {
+			@media (min-width: @small-screen) {
+                width: 100%; margin: 0; padding: 2.25em 1.5em 1.5em 1.5em; float: none; background: @dark-grey-1; border-bottom: 1px solid @white;
+            }
+            @media (min-width: @small-med-screen) {
+                height: 100%; margin: 0; padding: 0 0 0 0; background: none; border-bottom: 1px solid transparent; -webkit-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transform-style: preserve-3d; .transition(all 300ms ease-in);
+                &.light-colored {
+                    background: none;
+                }
+                &.flipped {
+                    width: 115%; height: 115%; margin-top: -7.5%; margin-left: -7.5%; position: relative; z-index: 2; -webkit-transform: rotateY(-180deg); -moz-transform: rotateY(-180deg); transform: rotateY(-180deg);
+                    .back {
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+			.face {
+				@media (min-width: @small-screen) {
+                    width: 100%; text-align: center;
+                }
+                @media (min-width: @small-med-screen) {
+                    height: 100%; position: absolute; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden; z-index: 2;
+                }
+				.icon {
+					@media (min-width: @small-screen) {
+                        width: 100%; margin: 0 auto .175em auto; font-size: 350%; line-height: 100%; color: @white;
+                    }
+                    @media (min-width: @small-med-screen) {
+                        margin: 22% auto .125em auto; padding: 0 0; float: left; font-size: 550%;
+                    }
+                    @media (min-width: 42em) {
+                        margin: 17% auto .125em auto;
+                    }
+                    @media (min-width: @medium-screen) {
+                        margin: 45% auto .125em auto;
+                    }
+                    @media (min-width: @med-large-screen) {
+                        margin: 35% auto .125em auto;
+                    }
+                    @media (min-width: 74em) {
+                        margin: 30% auto .125em auto;
+                    }
+				}
+				h3 {
+					.batman-light; font-size: 1.25em;  text-transform: uppercase; color: @white;
+				}
+			}
+			.front {
+				@media (min-width: @small-screen) {
+                    background: none;
+                }
+                @media (min-width: @small-med-screen) {
+                    position: absolute; z-index: 1; background: @dark-grey-1; border: 1px solid transparent; border-bottom: 1px solid @white; border-right: 1px solid @white; color: @white; cursor: pointer;
+                }
+                @media (min-width: @medium-screen) {
+                    border-right: 1px solid @white;
+                    .flip&&:last-child {
+                        border: 1px solid transparent;
+                    }
+                }
+			}
+			.back {
+                @media (min-width: @small-screen) {
+                    border: 1px solid @white; color: @white;
+                }
+				@media (min-width: @small-med-screen) {
+                   z-index: 2; padding: 1.5em 1.5em; -webkit-transform: rotateY(-180deg); -moz-transform: rotateY(-180deg); transform: rotateY(-180deg);  background: @recess-red; cursor: pointer;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+			}
+		}
+	}
+    // Accolades Tiles
+	&.light-colored {
+		.flip {
+			.card {
+				.front {
+					background: @mid-grey; color: @dark-grey-1;
+				}
+			}
+		}
+	}
+}
+
+// Social Share Section 
+.share-section {
+	text-align: center; margin: 2em auto 0 auto;
+	h4 {
+		margin-bottom: 1.27em; .batman-medium; font-size: .88em; color: @recess-red;
+	}
+	.share {
+		.mini-button {
+			display: inline-block; margin: 0 .5em; line-height: 2.25em;
+		}
+	}
+	> button {
+		@media (min-width: @small-screen) {
+			margin-top: 1.125em;
+		}
+		@media (min-width: @medium-screen) {
+			max-width: 50%;
+		}
+	}
+}
+
+// Sitemap
+.sitemap-page {
+	background: @white url('@{image-path}/step-pattern.png') repeat; float: left; width: 100%; padding: 8em 0 3em;
+	.sitemap-section {
+		ul {
+			li {
+				list-style: none; margin-bottom: 1em;
+				a {
+					.batman-bold; color: @recess-red; text-decoration: none;
+				}
+				ul {
+					margin: 0 0 0 2em;
+					li {
+						margin-bottom: .25em;
+						a {
+							.batman; color: @recess-grey; 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+section.pagination {
+	position: relative;
+}
+.pagination-button {
+	font-size: 1em; .batman-bold; color: @recess-red; text-decoration: none; .transition(all 250ms ease-in-out);
+	&.previous {
+		background: url('@{image-path}/icon_back-link.png') no-repeat left center; padding: 1.75em 0 1.75em 2em; position: absolute; left: 0;
+		&:hover {
+			background-position: 10px center;
+		}
+	}
+	&.next {
+		background: url('@{image-path}/icon_browse-files.png') no-repeat right center; padding: 1.75em 2em 1.75em 0; position: absolute; right: 0;
+		&:hover {
+			background-position: 90% center;
+		}
+	}
+}
+.next-link {
+	font-size: 1em; .batman-bold; color: @recess-red; text-decoration: none; .transition(all 250ms ease-in-out); background: url('@{image-path}/icon_browse-files.png') no-repeat right center; padding: 0 2em 0 0;
+	&:hover {
+		background-position: 90% center;
+	}
+}
+.button {
+	overflow: visible;
+}
+// 404 PAGE
+.page-node-144 {
+	article[role="main"] {
+		padding-top: 6.125em;
+	}
+	.leaderboard {
+		height: auto !important; min-height: 0; border-bottom: 1px solid @mid-grey; .box-shadow(0);
+		img {
+			float: left; max-width: 100%; min-height: 0;
+		}
+		header {
+			color: @text-grey; width: 60%; right: 0; padding: 0 3em 0 0;
+			h1 {
+				margin-bottom: .3em; font-weight: normal; font-size: 2.5em; line-height:110%; .batman-light; text-transform: uppercase; letter-spacing: .02em; text-shadow: none;
+				@media (min-width: @small-screen) {
+					font-size: 125%;	
+				}
+				@media (min-width: @small-med-screen) {
+					font-size: 175%;
+				}
+				@media (min-width: @medium-screen) {
+					font-size: 250%;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		article[role="main"] {padding-top: 0;}
+		.leaderboard header {position: static; clear: both; padding: 1em 0; width: 100%; background: @white; border-top: 1px solid @mid-grey;}
+	}
+}
+
+// OLD BROWSER 
+.fancybox-close {background: url('@{image-path}/modal-close.png') no-repeat; width: 26px; height: 26px; top: -8px; right: -8px;}
+.browser-detect {text-align: center; padding: 2em 0;}
+.browser-list { position: relative; left: 5px; height: auto; width: 100%; display: inline-block; }
+.browser-list ul { float: none; width: 100%;  }
+.browser-list ul li { float: left; width: 20%; height: 100px; list-style: none; clear: none; margin: 0;}
+.browser-list ul li a { width: 100%; height: 100%;  color: #333; text-align: left; text-align: center; }
+.browser-list ul li a span {width: 62px; height: 70px; display: block;  position: relative; margin: 0 auto;}
+.browser-list ul li a.chrome span { background: url('@{image-path}/browser-sprite.png') no-repeat 0px 0; }
+.browser-list ul li a.firefox span { background: url('@{image-path}/browser-sprite.png') no-repeat -87px 0; }
+.browser-list ul li a.ie span { background: url('@{image-path}/browser-sprite.png') no-repeat -181px 0; }
+.browser-list ul li a.opera span { background: url('@{image-path}/browser-sprite.png') no-repeat -265px 0; }
+.browser-list ul li a.safari span { background: url('@{image-path}/browser-sprite.png') no-repeat -346px 0; }
+
+
+//IE 10 FIX
+//html[data-useragent*='MSIE 10.0'] .flip-cards .flip .card.flipped .back {backface-visiblity: visible;}
+.ie10 .flip .card.flipped .back { border: 1px solid transparent; z-index: 2; backface-visibility: inherit; }
+.ie10 .flip .card.flipped .front { transform: rotateY(-180deg); }
+.ie10 .super-squad article.bio .card.flipped .bio-back {z-index: 2; backface-visibility: inherit; }
+.ie10 .super-squad article.bio .card.flipped .bio-front {transform: rotateY(-180deg);}
+
+@media (max-width: 767px) { 
+   article[role="main"] .leaderboard {height: auto !important; position: relative;}
+   article[role="main"] .leaderboard img {float: left;}
+   article[role="main"] .leaderboard header {margin-top: -4.125em; }
+   .agency-intro .highlighted-intro.mission {margin-top: 2em;}
+   .desktop-only {display: none;}
+}

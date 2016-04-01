@@ -1,0 +1,228 @@
+.page-node-6 {
+	article[role="main"] {
+		padding-top: 5.5em; background: @white url('@{image-path}/step-pattern.png') repeat;
+		section[role="main"] {
+			float: left;
+		}
+		.current-openings {
+			background: @recess-red; padding: 2em 0 3em; color: @white;
+			.container {
+				@media (min-width: @small-med-screen) { 
+	            	padding: 0 3.25em;
+	            }
+	            @media (min-width: @large-screen) { 
+	            	padding: 0 6.25em;
+	            }
+			}
+			h2 {
+				text-align: center; padding: 0; margin: 0 0 1em; position: relative;
+				&:before {
+		            content: ""; border-top: 1px solid @white; width: 27%; position: absolute; top: .5em; left: 0; 
+		            @media (min-width: @small-screen) { 
+		            	width: 10%;
+		            }
+		            @media (min-width: @small-med-screen) { 
+		            	width: 16%;
+		            }
+		            @media (min-width: @large-screen) { 
+		            	width: 25%;
+		            }
+		        }
+		        &:after {
+		            content: ""; border-top: 1px solid @white; width: 27%; position: absolute; top: .5em; right: 0; 
+		            @media (min-width: @small-screen) { 
+		            	width: 10%;
+		            }
+		            @media (min-width: @small-med-screen) { 
+		            	width: 16%;
+		            }
+		            @media (min-width: @large-screen) { 
+		            	width: 25%;
+		            }
+		        }
+			}
+			.jobs {
+				a {
+					color: @white; text-decoration: none; display: block; text-align: center; .transition(all 300ms ease-in);
+					&:hover {
+						.image {
+							background-color: rgba(0,0,0,.2);
+						}
+					}
+				}
+				span {
+					display: block;
+					&.job-title {
+						.batman-medium; font-size: 1.25em; 
+					}
+					&.image {
+						padding: 0; border: 3px solid @white; .border-radius(50%); max-width: 11.25em; margin: 1em auto; .transition(all 300ms ease-in);
+						img {
+							display: inherit; margin: 0 auto;
+						}
+					}
+				}
+
+			}
+			.no-openings {
+				text-align: center;
+			}
+		}
+		.main_content {
+			/*border-right: 1px solid @recess-red; padding-right: 3em;*/ padding: 4.5em 0 4em; text-align: center;
+		}
+	}
+	footer[role="contentinfo"] {
+		margin-top: 0;
+	}
+	
+}
+.quote-section {
+	float: left; width: 100%; background: @light-grey;
+	img {
+		float: left;
+	}
+	div {
+		float: left;
+	}
+	.career-quote {
+		width: 100%; padding: 0; margin: 0; border: none; background: transparent; text-align: center; padding: 0 0 0 4em; position: relative;
+		h4 {
+			.klinic-slab-bold; font-size: 2.625em; margin-bottom: 1.25em;
+		}
+		p {
+			.batman-medium; font-size: 1em; text-transform: uppercase;
+		}
+	}
+}
+.reasons-list {
+	position: relative; padding-top: 2em;
+	h3 {
+        .batman-bold; text-align: center; font-size: 1em; color: @recess-red; width: 80%; margin: 0 auto;
+        &:before {
+            content: ""; border-top: 1px solid @recess-red; width: 20%; position: absolute; top: 2.5em; left: 0; 
+        }
+        &:after {
+            content: ""; border-top: 1px solid @recess-red; width: 20%; position: absolute; top: 2.5em; right: 0; 
+        }
+    }
+    ol {
+    	counter-reset:li;
+    	li {
+    		padding-left: 2.5em; position: relative; margin: 1em 0; font-size: .9em;
+    		&:before {
+    			content: counter(li); counter-increment: li; position: absolute; left: 0; top: 0; font-size: 1.1em; width: 1.4em; text-align: center; .batman-bold; color: @recess-red; border: 1px solid @recess-red; .border-radius(50%);
+    		}
+    	}
+    }
+}
+.node-type-job-posting {
+	background: @white url('@{image-path}/step-pattern.png') repeat; 
+	article[role="main"] {
+		padding-top: 5.5em;
+		section[role="main"] {
+			margin: 2em 0 5em;
+			.button {
+				margin: 2em 0;
+				&.back {
+					max-width: 33.33%;
+				}
+			}
+		}
+		.job-details {
+			padding-top: 3em; 
+			h3 {
+				margin: 0; font-size: 1em;
+			}
+			ul {
+				padding-left: 1em; margin: 1em 0; font-size: .9em;
+			}
+			div {
+				clear: both;
+			}
+			header {
+				position: relative;
+				h1 {
+					padding-right: 2.5em; margin-bottom: 0;
+				}
+			}
+			.back-to-careers {
+				.batman-bold; font-size: 1em; text-decoration: none; color: @recess-red; float: right; position: relative; z-index: 2; top: auto; bottom: 2em; background: url('@{image-path}/icon_back-link.png') no-repeat left center; padding-left: 1.5em; .transition(all 150ms ease-in);
+				&:hover {
+					background-position: 8px center;
+				}
+			}
+		}
+		.apply-form {
+			background: @light-grey; border-top: 1px solid @mid-grey; padding: 3em 0;
+			.block-webform {
+				h2 {
+					display: block; text-align: center;
+				}
+				h3 {
+					font-size: 1em; .batman-bold; color: @recess-red; position: relative; text-align: center; margin-top: 2em;
+					img {
+						position: relative; top: .2em;
+					}
+					&:before {
+		                content: ""; border-top: 1px solid @recess-red; width: 28%; position: absolute; top: .75em; left: 0; 
+		            }
+		            &:after {
+		                content: ""; border-top: 1px solid @recess-red; width: 28%; position: absolute; top: .75em; right: 0; 
+		            }
+				}
+			}
+			.button.back {
+				max-width: 33.33%; margin: 2em 0;
+			}
+			.success {
+				text-align: center; display: none; padding: 4em 0;
+				.back-to-careers {
+					.batman-bold; font-size: 1em; text-decoration: none; color: @recess-red; background: url('@{image-path}/icon_back-link.png') no-repeat left center; padding-left: 1.5em; .transition(all 150ms ease-in);
+					&:hover {
+						background-position: 8px center;
+					}
+				}
+			}
+		}
+
+	}
+}
+@media (max-width: 767px) { 
+	.page-node-6 {
+		article[role="main"] { 
+			padding-top: 0;
+			.current-openings {
+				h2:before, h2:after {
+					//width: 18%;
+				}
+			}
+			.main_content {
+				padding: 1.5em 0 1em;
+			}
+		}
+	}
+	.quote-section img {width: 100%;}
+	.quote-section .career-quote {position: static; padding: 1em;} 
+	.quote-section .career-quote h4 {font-size: 2em;}
+
+	.node-type-job-posting article[role="main"] {padding-top: 0;}
+	.node-type-job-posting article[role="main"] section[role="main"] {margin: 0 0 3em;}
+	.node-type-job-posting article[role="main"] .job-details .back-to-careers {float: none; top: 0;}
+	.form-actions {padding-left: 1em;}
+        
+}
+
+@media only screen and (max-width : 767px) {
+	.node-type-job-posting article[role="main"] .job-details { padding-top:1.8em!important; }
+	.node-type-job-posting article[role="main"] .job-details h1 { padding-bottom: 1em; }
+
+	div.form-item.webform-component.webform-component-markup.webform-component--upload-text-1 h3 { border: none!important; }
+	div.form-item.webform-component.webform-component-markup.webform-component--upload-text-1 h3::after { border: none; }
+	div.form-item.webform-component.webform-component-markup.webform-component--upload-text-1 h3::before { border: none; }
+
+	.back-to-careers { margin-top: 20px!important; margin-bottom: 20px!important; display: block; }
+	.back-to-careers.animate-in.mobile-only { display: block!important; top: 10px;margin-bottom:40px; }
+	.back-to-careers.first { display: none; }
+	.success .back-to-careers {width: 157px; margin: 0 auto; }
+}
